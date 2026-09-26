@@ -5,7 +5,7 @@ import Layout from '../layouts/Layout.astro';
 <Layout 
   locale="en" 
   customTitle="Privacy Policy — EpoxyResin-Calculator.com"
-  customDescription="Privacy policy for EpoxyResin-Calculator.com. We operate as a zero-data, client-side local calculation micro-tool."
+  customDescription="Privacy policy for EpoxyResin-Calculator.com. Learn how we handle client-side calculations, cookies, and Google Analytics."
   showLanguageSelector={false}
 >
   <div class="py-16 bg-white dark:bg-slate-950 transition-colors duration-200">
@@ -26,37 +26,74 @@ import Layout from '../layouts/Layout.astro';
       <div class="prose prose-slate dark:prose-invert text-sm leading-relaxed space-y-6 text-slate-700 dark:text-slate-300">
         
         <section>
-          <h2 class="text-lg font-bold text-slate-900 dark:text-white mb-2">1. Zero Personal Data Collection</h2>
+          <h2 class="text-lg font-bold text-slate-900 dark:text-white mb-2">1. Client-Side Calculation Privacy</h2>
           <p>
-            EpoxyResin-Calculator.com ("we", "us", or "our") operates as a client-side utility micro-tool. We do not require account registration, login credentials, email addresses, payment information, or personal identifiers. You can use all mathematical calculators, volume formulas, and density ratio tables completely anonymously.
+            EpoxyResin-Calculator.com (&quot;we&quot;, &quot;us&quot;, or &quot;our&quot;) is engineered as a privacy-first utility micro-tool. We do not require user accounts, logins, passwords, email subscriptions, or billing details to access any part of our calculator suite.
+          </p>
+          <p class="mt-2">
+            All dimension values (Length, Width, Diameter, Depth, Margin of Error, and Specific Gravity ratios) entered into the calculator are evaluated strictly in your local browser runtime memory via client-side JavaScript. <strong>We do not capture, log, or transmit your workshop dimensions, proprietary mold measurements, or resin recipes to our servers or any third-party database.</strong>
           </p>
         </section>
 
         <section>
-          <h2 class="text-lg font-bold text-slate-900 dark:text-white mb-2">2. Local Browser Execution</h2>
+          <h2 class="text-lg font-bold text-slate-900 dark:text-white mb-2">2. Web Analytics (Google Analytics 4)</h2>
           <p>
-            All dimension inputs (Length, Width, Diameter, Depth, Wastage Margins, and Specific Gravities) and resulting volume and weight calculations are computed locally within your browser's runtime memory via client-side JavaScript. None of your entered measurements, mold dimensions, or workshop recipes are transmitted to, stored on, or processed by any external server or third-party database.
+            To understand how visitors interact with our calculators, diagnose technical issues, and improve our guides and internationalization features, we use <strong>Google Analytics</strong> (Google LLC).
+          </p>
+          <p class="mt-2">
+            Google Analytics collects non-personally identifiable aggregate telemetry such as:
+          </p>
+          <ul class="list-disc pl-5 mt-2 space-y-1 text-slate-600 dark:text-slate-300">
+            <li>Approximate geographic location (country and city level; IP addresses are anonymized by default in GA4);</li>
+            <li>Browser type, device model, operating system, and screen resolution;</li>
+            <li>Referral sources (e.g., search engine queries, referring websites);</li>
+            <li>Page visits, navigation paths, session duration, and feature interactions (such as unit switches or language selections).</li>
+          </ul>
+          <p class="mt-2">
+            Google Analytics does not collect personally identifiable information (PII) like names or physical addresses, and it does not link your website visits to personal identity records. For more details on how Google handles data, please consult <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener noreferrer" class="text-cyan-700 dark:text-cyan-400 underline hover:text-cyan-800 dark:hover:text-cyan-300">How Google uses information from sites or apps that use our services</a> and the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" class="text-cyan-700 dark:text-cyan-400 underline hover:text-cyan-800 dark:hover:text-cyan-300">Google Privacy Policy</a>.
           </p>
         </section>
 
         <section>
           <h2 class="text-lg font-bold text-slate-900 dark:text-white mb-2">3. Cookies and Tracking Technologies</h2>
           <p>
-            We do not use tracking cookies, cross-site profiling trackers, or intrusive advertising telemetry. Our static website files are hosted on Cloudflare Pages, which processes standard transient HTTP networking logs (such as IP addresses and user agents) strictly for DDoS mitigation, edge caching, and server security.
+            Google Analytics utilizes first-party cookies (small text files stored on your device, such as <code class="bg-slate-100 dark:bg-slate-800 px-1.5 py-0.5 rounded text-xs">_ga</code> and <code class="bg-slate-100 dark:bg-slate-800 px-1.5 py-0.5 rounded text-xs">_ga_*</code>) to distinguish unique visitors and record aggregate traffic metrics across sessions.
+          </p>
+          <p class="mt-2">
+            In addition, we use browser <code class="bg-slate-100 dark:bg-slate-800 px-1.5 py-0.5 rounded text-xs">localStorage</code> strictly for functional preferences: preserving your dark/light theme choice and your preferred measurement system (Metric vs. Imperial) so that your preferred unit settings persist between visits.
           </p>
         </section>
 
         <section>
-          <h2 class="text-lg font-bold text-slate-900 dark:text-white mb-2">4. Clipboard Functionality</h2>
+          <h2 class="text-lg font-bold text-slate-900 dark:text-white mb-2">4. Managing and Opting Out of Analytics</h2>
           <p>
-            The "Copy Workshop Recipe" tool utilizes standard browser Clipboard APIs solely to place the formatted calculation summary onto your device's local clipboard when you deliberately click the button. No clipboard contents are accessed, read, or transmitted.
+            You have full control over cookie storage and analytics tracking:
+          </p>
+          <ul class="list-disc pl-5 mt-2 space-y-1 text-slate-600 dark:text-slate-300">
+            <li><strong>Browser Cookie Controls:</strong> You can configure your browser to block or delete cookies at any time via your browser settings.</li>
+            <li><strong>Google Analytics Opt-Out:</strong> You can install the official <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener noreferrer" class="text-cyan-700 dark:text-cyan-400 underline hover:text-cyan-800 dark:hover:text-cyan-300">Google Analytics Opt-out Browser Add-on</a> to prevent data collection across all websites.</li>
+            <li><strong>Content Blockers:</strong> Standard ad blockers and privacy extensions (such as uBlock Origin or browser tracking prevention) block analytics requests without impacting any calculator features.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 class="text-lg font-bold text-slate-900 dark:text-white mb-2">5. Hosting and Edge Infrastructure</h2>
+          <p>
+            Our static site assets are delivered globally via Cloudflare Pages. Cloudflare processes transient HTTP connection metadata (IP addresses, request headers) strictly for essential security functions, including DDoS mitigation, bot defense, and edge caching.
           </p>
         </section>
 
         <section>
-          <h2 class="text-lg font-bold text-slate-900 dark:text-white mb-2">5. Contact Information</h2>
+          <h2 class="text-lg font-bold text-slate-900 dark:text-white mb-2">6. Clipboard Functionality</h2>
           <p>
-            If you have questions regarding this privacy policy or our technical implementation, you can contact the engineering team via our public repository or at <span class="font-mono text-cyan-800 dark:text-cyan-400">support@epoxyresin-calculator.com</span>.
+            The &quot;Copy Workshop Recipe&quot; feature utilizes standard browser Clipboard APIs solely to copy the formatted text summary to your clipboard when you click the button. No clipboard contents are accessed, read, or transmitted.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="text-lg font-bold text-slate-900 dark:text-white mb-2">7. Contact Information</h2>
+          <p>
+            If you have questions regarding this privacy policy or our analytics implementation, please contact us at <a href="mailto:support@epoxyresin-calculator.com" class="font-mono text-cyan-800 dark:text-cyan-400 underline">support@epoxyresin-calculator.com</a>.
           </p>
         </section>
 
