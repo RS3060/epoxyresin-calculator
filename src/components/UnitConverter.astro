@@ -1,0 +1,233 @@
+---
+import type { Locale } from '../i18n/translations';
+import { translations } from '../i18n/translations';
+
+interface Props {
+  currentLocale: Locale;
+}
+
+const { currentLocale } = Astro.props;
+const t = translations[currentLocale] || translations.en;
+const conv = t.converter;
+---
+
+<section id="converter" class="py-16 bg-white border-t border-slate-200/80">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    
+    <div class="mx-auto max-w-3xl text-center mb-10">
+      <span class="text-xs font-bold uppercase tracking-wider text-cyan-700">{conv.eyebrow}</span>
+      <h2 class="text-3xl font-black tracking-tight text-slate-900 sm:text-4xl mt-1">
+        {conv.title}
+      </h2>
+      <p class="text-base text-slate-600 mt-2">
+        {conv.subtitle}
+      </p>
+    </div>
+
+    {/* Converter Card */}
+    <div class="mx-auto max-w-3xl rounded-2xl border border-slate-200 bg-slate-50/50 p-6 sm:p-8 shadow-xs">
+      
+      <div class="grid grid-cols-1 md:grid-cols-11 gap-4 items-center">
+        
+        {/* Input Group (5 cols) */}
+        <div class="md:col-span-5 space-y-2">
+          <label for="conv-amount-input" class="block text-xs font-bold text-slate-700">
+            {conv.amount}
+          </label>
+          <div class="flex rounded-xl border border-slate-200 bg-white shadow-xs focus-within:border-cyan-600 focus-within:ring-2 focus-within:ring-cyan-600/20 overflow-hidden">
+            <input 
+              type="number" 
+              id="conv-amount-input" 
+              min="0.001" 
+              step="any" 
+              value="500" 
+              class="w-full px-3.5 py-2.5 text-base font-bold text-slate-900 tabular-nums outline-none"
+              aria-label="Conversion Amount"
+            />
+            <select 
+              id="conv-from-unit" 
+              class="border-l border-slate-200 bg-slate-50 px-3 py-2.5 text-xs font-bold text-slate-700 outline-none cursor-pointer hover:bg-slate-100"
+              aria-label="Source Unit"
+            >
+              <optgroup label={conv.groupVolume}>
+                <option value="ml" selected>{conv.units.ml}</option>
+                <option value="l">{conv.units.l}</option>
+                <option value="floz">{conv.units.floz}</option>
+                <option value="gal">{conv.units.gal}</option>
+              </optgroup>
+              <optgroup label={conv.groupWeight}>
+                <option value="g">{conv.units.g}</option>
+                <option value="kg">{conv.units.kg}</option>
+                <option value="oz">{conv.units.oz}</option>
+                <option value="lbs">{conv.units.lbs}</option>
+              </optgroup>
+            </select>
+          </div>
+        </div>
+
+        {/* Swap / Arrow Button (1 col) */}
+        <div class="md:col-span-1 flex justify-center">
+          <button 
+            type="button" 
+            id="conv-swap-btn"
+            class="flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-600 shadow-xs hover:border-cyan-600 hover:text-cyan-600 transition-all focus-visible:outline-2 focus-visible:outline-cyan-600 cursor-pointer"
+            aria-label="Swap conversion units"
+          >
+            <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m16 3 4 4-4 4"/><path d="M20 7H4"/><path d="m8 21-4-4 4-4"/><path d="M4 17h16"/></svg>
+          </button>
+        </div>
+
+        {/* Output Group (5 cols) */}
+        <div class="md:col-span-5 space-y-2">
+          <label for="conv-to-unit" class="block text-xs font-bold text-slate-700">
+            {conv.toUnit}
+          </label>
+          <div class="flex rounded-xl border border-slate-200 bg-white shadow-xs focus-within:border-cyan-600 focus-within:ring-2 focus-within:ring-cyan-600/20 overflow-hidden">
+            <div id="conv-output-display" class="w-full px-3.5 py-2.5 text-base font-extrabold text-cyan-700 tabular-nums bg-cyan-50/30 flex items-center">
+              560 g
+            </div>
+            <select 
+              id="conv-to-unit" 
+              class="border-l border-slate-200 bg-slate-50 px-3 py-2.5 text-xs font-bold text-slate-700 outline-none cursor-pointer hover:bg-slate-100"
+              aria-label="Target Unit"
+            >
+              <optgroup label={conv.groupWeight}>
+                <option value="g" selected>{conv.units.g}</option>
+                <option value="kg">{conv.units.kg}</option>
+                <option value="oz">{conv.units.oz}</option>
+                <option value="lbs">{conv.units.lbs}</option>
+              </optgroup>
+              <optgroup label={conv.groupVolume}>
+                <option value="ml">{conv.units.ml}</option>
+                <option value="l">{conv.units.l}</option>
+                <option value="floz">{conv.units.floz}</option>
+                <option value="gal">{conv.units.gal}</option>
+              </optgroup>
+            </select>
+          </div>
+        </div>
+
+      </div>
+
+      {/* Quick Preset Conversion Pills */}
+      <div class="mt-6 pt-5 border-t border-slate-200 flex flex-wrap items-center justify-between gap-2 text-xs">
+        <div class="flex flex-wrap gap-1.5">
+          <span class="text-slate-400 font-medium py-1">{conv.quickConversions}</span>
+          <button type="button" class="conv-quick-pill rounded-md bg-white border border-slate-200 px-2.5 py-1 text-slate-700 hover:border-cyan-600 transition-colors" data-amt="1000" data-from="ml" data-to="floz">{conv.quickButtons.lToFloz}</button>
+          <button type="button" class="conv-quick-pill rounded-md bg-white border border-slate-200 px-2.5 py-1 text-slate-700 hover:border-cyan-600 transition-colors" data-amt="1" data-from="gal" data-to="l">{conv.quickButtons.galToL}</button>
+          <button type="button" class="conv-quick-pill rounded-md bg-white border border-slate-200 px-2.5 py-1 text-slate-700 hover:border-cyan-600 transition-colors" data-amt="500" data-from="ml" data-to="g">{conv.quickButtons.mlToG}</button>
+          <button type="button" class="conv-quick-pill rounded-md bg-white border border-slate-200 px-2.5 py-1 text-slate-700 hover:border-cyan-600 transition-colors" data-amt="1" data-from="kg" data-to="ml">{conv.quickButtons.kgToMl}</button>
+        </div>
+        <span class="text-[11px] text-slate-400">{conv.calibratedDensity}</span>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<script is:inline>
+  (function() {
+    var ML_PER_FL_OZ = 29.5735295625;
+    var ML_PER_GAL = 3785.411784;
+    var G_PER_OZ = 28.349523125;
+    var G_PER_LB = 453.59237;
+    var DENSITY = 1.12; // average mixed epoxy specific gravity
+
+    var amtInput = document.getElementById('conv-amount-input');
+    var fromSelect = document.getElementById('conv-from-unit');
+    var toSelect = document.getElementById('conv-to-unit');
+    var outDisplay = document.getElementById('conv-output-display');
+    var swapBtn = document.getElementById('conv-swap-btn');
+    var quickPills = document.querySelectorAll('.conv-quick-pill');
+
+    function isVolume(u) {
+      return u === 'ml' || u === 'l' || u === 'floz' || u === 'gal';
+    }
+
+    function toMl(val, unit) {
+      if (unit === 'ml') return val;
+      if (unit === 'l') return val * 1000;
+      if (unit === 'floz') return val * ML_PER_FL_OZ;
+      if (unit === 'gal') return val * ML_PER_GAL;
+      return val;
+    }
+
+    function mlToVol(ml, unit) {
+      if (unit === 'ml') return ml;
+      if (unit === 'l') return ml / 1000;
+      if (unit === 'floz') return ml / ML_PER_FL_OZ;
+      if (unit === 'gal') return ml / ML_PER_GAL;
+      return ml;
+    }
+
+    function toGrams(val, unit) {
+      if (unit === 'g') return val;
+      if (unit === 'kg') return val * 1000;
+      if (unit === 'oz') return val * G_PER_OZ;
+      if (unit === 'lbs') return val * G_PER_LB;
+      return val;
+    }
+
+    function gramsToWt(g, unit) {
+      if (unit === 'g') return g;
+      if (unit === 'kg') return g / 1000;
+      if (unit === 'oz') return g / G_PER_OZ;
+      if (unit === 'lbs') return g / G_PER_LB;
+      return g;
+    }
+
+    function runConversion() {
+      var val = parseFloat(amtInput.value) || 0;
+      var from = fromSelect.value;
+      var to = toSelect.value;
+      var result = 0;
+
+      if (isVolume(from) && isVolume(to)) {
+        var ml = toMl(val, from);
+        result = mlToVol(ml, to);
+      } else if (!isVolume(from) && !isVolume(to)) {
+        var g = toGrams(val, from);
+        result = gramsToWt(g, to);
+      } else if (isVolume(from) && !isVolume(to)) {
+        // Volume to Weight: Mass = Volume * Density
+        var mlVal = toMl(val, from);
+        var gVal = mlVal * DENSITY;
+        result = gramsToWt(gVal, to);
+      } else {
+        // Weight to Volume: Volume = Mass / Density
+        var gIn = toGrams(val, from);
+        var mlOut = gIn / DENSITY;
+        result = mlToVol(mlOut, to);
+      }
+
+      var decimals = result >= 100 ? 1 : (result >= 1 ? 2 : 3);
+      outDisplay.textContent = result.toLocaleString('en-US', {
+        minimumFractionDigits: 0,
+        maximumFractionDigits: decimals
+      }) + ' ' + to;
+    }
+
+    amtInput.addEventListener('input', runConversion);
+    fromSelect.addEventListener('change', runConversion);
+    toSelect.addEventListener('change', runConversion);
+
+    swapBtn.addEventListener('click', function() {
+      var temp = fromSelect.value;
+      fromSelect.value = toSelect.value;
+      toSelect.value = temp;
+      runConversion();
+    });
+
+    for (var i = 0; i < quickPills.length; i++) {
+      quickPills[i].addEventListener('click', function() {
+        amtInput.value = this.getAttribute('data-amt');
+        fromSelect.value = this.getAttribute('data-from');
+        toSelect.value = this.getAttribute('data-to');
+        runConversion();
+      });
+    }
+
+    runConversion();
+  })();
+</script>

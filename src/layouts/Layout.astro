@@ -1,23 +1,206 @@
-<!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
-	</head>
-	<body>
-		<slot />
-	</body>
-</html>
+---
+import '../styles/global.css';
+import type { Locale } from '../i18n/translations';
+import { translations } from '../i18n/translations';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
 
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
-</style>
+interface Props {
+  locale?: Locale;
+  customTitle?: string;
+  customDescription?: string;
+  showLanguageSelector?: boolean;
+  noindex?: boolean;
+}
+
+const { 
+  locale = 'en', 
+  customTitle, 
+  customDescription, 
+  showLanguageSelector = true,
+  noindex = false
+} = Astro.props;
+const t = translations[locale] || translations.en;
+
+const title = customTitle || t.meta.title;
+const description = customDescription || t.meta.description;
+
+const siteUrl = Astro.site ? Astro.site.toString().replace(/\/$/, '') : 'https://epoxyresin-calculator.com';
+const canonicalUrl = new URL(Astro.url.pathname, siteUrl).toString();
+const ogImageUrl = `${siteUrl}/og-image.jpg`;
+const keywords = t.meta.keywords || 'epoxy resin calculator, epoxy calculator, resin calculator, epoxy mixing ratio, calculate epoxy resin, epoxy coverage calculator';
+
+// JSON-LD Schemas
+const webAppSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebApplication',
+  'name': t.hero.title,
+  'alternateName': ['Epoxy Calculator', 'Resin Calculator', 'Epoxy Resin Volume & Mixing Ratio Calculator'],
+  'inLanguage': locale,
+  'url': canonicalUrl,
+  'applicationCategory': 'UtilitiesApplication',
+  'operatingSystem': 'All',
+  'browserRequirements': 'Requires JavaScript. Requires HTML5.',
+  'offers': {
+    '@type': 'Offer',
+    'price': '0',
+    'priceCurrency': 'USD'
+  },
+  'description': description,
+  'image': ogImageUrl,
+  'author': {
+    '@type': 'Organization',
+    'name': 'Epoxy Resin Calculator',
+    'url': siteUrl
+  },
+  'featureList': [
+    'Epoxy resin volume calculation for rectangles, circles, ovals, and live-edge river tables',
+    'Stoichiometric Part A resin and Part B hardener mixing ratios by volume and digital scale weight',
+    'Safety wastage buffer calculation (cup cling, wood absorption)',
+    'Real-time metric and imperial unit conversions (ml, fl oz, liters, gallons, grams, lbs)',
+    'Specific gravity and density compensation for accurate mass splits'
+  ]
+};
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  'itemListElement': [
+    {
+      '@type': 'ListItem',
+      'position': 1,
+      'name': t.nav.calculator,
+      'item': `${siteUrl}/`
+    },
+    {
+      '@type': 'ListItem',
+      'position': 2,
+      'name': t.hero.title,
+      'item': canonicalUrl
+    }
+  ]
+};
+
+const articleSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  'headline': 'The Complete Guide to Using the Epoxy Resin Calculator for Precision Pours',
+  'description': 'Master epoxy resin volume calculations, mixing ratios by weight vs volume, exotherm management, and surface coverage with our comprehensive guide.',
+  'image': ogImageUrl,
+  'author': {
+    '@type': 'Organization',
+    'name': 'Epoxy Resin Calculator',
+    'url': siteUrl
+  },
+  'publisher': {
+    '@type': 'Organization',
+    'name': 'Epoxy Resin Calculator',
+    'logo': {
+      '@type': 'ImageObject',
+      'url': `${siteUrl}/favicon.svg`
+    }
+  },
+  'mainEntityOfPage': {
+    '@type': 'WebPage',
+    '@id': canonicalUrl
+  }
+};
+
+const faqData = t.faq || translations.en.faq;
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  'mainEntity': faqData.items.map((item) => ({
+    '@type': 'Question',
+    'name': item.q,
+    'acceptedAnswer': {
+      '@type': 'Answer',
+      'text': item.a
+    }
+  }))
+};
+
+const ogLocales: Record<Locale, string> = {
+  en: 'en_US',
+  es: 'es_ES',
+  de: 'de_DE',
+  fr: 'fr_FR',
+  id: 'id_ID',
+  it: 'it_IT',
+  pt: 'pt_PT',
+  pl: 'pl_PL',
+  ru: 'ru_RU',
+  bg: 'bg_BG',
+};
+---
+
+<!doctype html>
+<html lang={locale} class="scroll-smooth antialiased">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    {/* Primary Metadata */}
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="keywords" content={keywords} />
+    <meta name="robots" content={noindex ? "noindex, follow" : "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"} />
+    <link rel="canonical" href={canonicalUrl} />
+
+    {/* Favicons & Web Manifest */}
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="epoxycalc" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <meta name="generator" content={Astro.generator} />
+
+    {/* OpenGraph & Social Sharing Meta Tags */}
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:site_name" content="Epoxy Resin Calculator" />
+    <meta property="og:locale" content={ogLocales[locale] || 'en_US'} />
+    <meta property="og:image" content={ogImageUrl} />
+    <meta property="og:image:secure_url" content={ogImageUrl} />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="1280" />
+    <meta property="og:image:height" content="720" />
+    <meta property="og:image:alt" content="Epoxy Resin Calculator - Precision Volume & Mixing Ratio Engine" />
+    
+    {/* Twitter Card Meta Tags */}
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImageUrl} />
+    <meta name="twitter:image:alt" content="Epoxy Resin Calculator - Precision Volume & Mixing Ratio Engine" />
+
+    {/* Multilingual Alternate Links (hreflang) */}
+    <link rel="alternate" hreflang="en" href={`${siteUrl}/`} />
+    <link rel="alternate" hreflang="es" href={`${siteUrl}/es/`} />
+    <link rel="alternate" hreflang="de" href={`${siteUrl}/de/`} />
+    <link rel="alternate" hreflang="fr" href={`${siteUrl}/fr/`} />
+    <link rel="alternate" hreflang="id" href={`${siteUrl}/id/`} />
+    <link rel="alternate" hreflang="it" href={`${siteUrl}/it/`} />
+    <link rel="alternate" hreflang="pt" href={`${siteUrl}/pt/`} />
+    <link rel="alternate" hreflang="pl" href={`${siteUrl}/pl/`} />
+    <link rel="alternate" hreflang="ru" href={`${siteUrl}/ru/`} />
+    <link rel="alternate" hreflang="bg" href={`${siteUrl}/bg/`} />
+    <link rel="alternate" hreflang="x-default" href={`${siteUrl}/`} />
+
+    {/* JSON-LD Structured Data Schemas */}
+    <script type="application/ld+json" set:html={JSON.stringify(webAppSchema)} />
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
+  </head>
+  <body class="min-h-screen bg-[#f8fafc] text-slate-900 flex flex-col font-sans">
+    <Header currentLocale={locale} showLanguageSelector={showLanguageSelector} />
+    <main class="flex-1 workshop-grid">
+      <slot />
+    </main>
+    <Footer currentLocale={locale} />
+  </body>
+</html>

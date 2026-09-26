@@ -1,0 +1,120 @@
+---
+import type { Locale } from '../i18n/translations';
+import { translations } from '../i18n/translations';
+
+interface Props {
+  currentLocale: Locale;
+}
+
+const { currentLocale } = Astro.props;
+const t = translations[currentLocale] || translations.en;
+const r = t.referenceTable;
+
+const referenceProjects = [
+  {
+    name: r.projects.p1,
+    dimensions: '10 × 10 × 0.5 cm',
+    volumeMl: '53 ml',
+    flOz: '1.8 fl oz',
+    weightG: '58 g',
+    partA: '35 ml (40 g)',
+    partB: '18 ml (18 g)',
+  },
+  {
+    name: r.projects.p2,
+    dimensions: '30 × 30 × 1.0 cm',
+    volumeMl: '945 ml',
+    flOz: '32.0 fl oz',
+    weightG: '1,040 g',
+    partA: '630 ml (725 g)',
+    partB: '315 ml (315 g)',
+  },
+  {
+    name: r.projects.p3,
+    dimensions: '60 cm Ø × 0.6 cm',
+    volumeMl: '1,781 ml',
+    flOz: '60.2 fl oz',
+    weightG: '1,960 g',
+    partA: '1,188 ml (1,366 g)',
+    partB: '594 ml (594 g)',
+  },
+  {
+    name: r.projects.p4,
+    dimensions: '60 cm Ø × 3.0 cm',
+    volumeMl: '8,906 ml',
+    flOz: '301 fl oz',
+    weightG: '9,797 g',
+    partA: '5,938 ml (6,828 g)',
+    partB: '2,969 ml (2,969 g)',
+  },
+  {
+    name: r.projects.p5,
+    dimensions: `120 × 20 ${r.avgVoid} × 5.0 cm`,
+    volumeMl: '12,600 ml',
+    flOz: '426 fl oz (3.3 gal)',
+    weightG: '13,860 g (13.9 kg)',
+    partA: '8,400 ml (9,660 g)',
+    partB: '4,200 ml (4,200 g)',
+  },
+  {
+    name: r.projects.p6,
+    dimensions: `180 × 30 ${r.avgVoid} × 4.0 cm`,
+    volumeMl: '22,680 ml',
+    flOz: '767 fl oz (6.0 gal)',
+    weightG: '24,948 g (24.9 kg)',
+    partA: '15,120 ml (17,388 g)',
+    partB: '7,560 ml (7,560 g)',
+  },
+];
+---
+
+<section id="reference-table" class="py-12 border-t border-slate-200/80 bg-slate-50/50">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class="mb-8">
+      <span class="text-xs font-bold uppercase tracking-wider text-cyan-700">{r.eyebrow}</span>
+      <h2 class="text-2xl font-black tracking-tight text-slate-900 sm:text-3xl mt-1">
+        {r.title}
+      </h2>
+      <p class="text-sm text-slate-600 mt-2">
+        {r.subtitle} ({r.calcNote})
+      </p>
+    </div>
+
+    {/* Responsive Table Card */}
+    <div class="overflow-x-auto rounded-2xl border border-slate-200 bg-white shadow-xs">
+      <table class="w-full text-left border-collapse text-xs sm:text-sm">
+        <thead>
+          <tr class="border-b border-slate-200 bg-slate-100/70 text-slate-900 font-bold">
+            <th class="py-3.5 px-4">{r.colProject}</th>
+            <th class="py-3.5 px-4">{r.colDimensions}</th>
+            <th class="py-3.5 px-4">{r.colVolume}</th>
+            <th class="py-3.5 px-4">{r.colFlOz}</th>
+            <th class="py-3.5 px-4">{r.colWeight}</th>
+            <th class="py-3.5 px-4 text-cyan-900">{r.colPartA}</th>
+            <th class="py-3.5 px-4 text-amber-900">{r.colPartB}</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-slate-100 font-medium text-slate-700">
+          {referenceProjects.map((row, idx) => (
+            <tr class={idx % 2 === 0 ? 'bg-white hover:bg-slate-50/80 transition-colors' : 'bg-slate-50/30 hover:bg-slate-50/80 transition-colors'}>
+              <td class="py-3.5 px-4 font-bold text-slate-900">{row.name}</td>
+              <td class="py-3.5 px-4 text-slate-600 tabular-nums">{row.dimensions}</td>
+              <td class="py-3.5 px-4 font-bold text-slate-900 tabular-nums">{row.volumeMl}</td>
+              <td class="py-3.5 px-4 text-slate-600 tabular-nums">{row.flOz}</td>
+              <td class="py-3.5 px-4 font-semibold text-slate-900 tabular-nums">{row.weightG}</td>
+              <td class="py-3.5 px-4 font-bold text-cyan-700 tabular-nums bg-cyan-50/30">{row.partA}</td>
+              <td class="py-3.5 px-4 font-bold text-amber-700 tabular-nums bg-amber-50/30">{row.partB}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+
+    <div class="mt-4 flex items-center justify-between text-xs text-slate-500">
+      <span>{r.safetyNote}</span>
+      <a href="#calculator" class="font-bold text-cyan-700 hover:text-cyan-800 transition-colors">
+        {r.adjustLink}
+      </a>
+    </div>
+  </div>
+</section>

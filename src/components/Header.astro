@@ -1,0 +1,71 @@
+---
+import type { Locale } from '../i18n/translations';
+import { translations } from '../i18n/translations';
+
+interface Props {
+  currentLocale: Locale;
+  showLanguageSelector?: boolean;
+}
+
+const { currentLocale, showLanguageSelector = true } = Astro.props;
+const t = translations[currentLocale] || translations.en;
+
+const locales: { code: Locale; label: string; flag: string; path: string }[] = [
+  { code: 'en', label: 'English', flag: '🇺🇸', path: '/' },
+  { code: 'es', label: 'Español', flag: '🇪🇸', path: '/es/' },
+  { code: 'de', label: 'Deutsch', flag: '🇩🇪', path: '/de/' },
+  { code: 'fr', label: 'Français', flag: '🇫🇷', path: '/fr/' },
+  { code: 'id', label: 'Bahasa Indonesia', flag: '🇮🇩', path: '/id/' },
+  { code: 'it', label: 'Italiano', flag: '🇮🇹', path: '/it/' },
+  { code: 'pt', label: 'Português', flag: '🇵🇹', path: '/pt/' },
+  { code: 'pl', label: 'Polski', flag: '🇵🇱', path: '/pl/' },
+  { code: 'ru', label: 'Русский', flag: '🇷🇺', path: '/ru/' },
+  { code: 'bg', label: 'Български', flag: '🇧🇬', path: '/bg/' },
+];
+---
+
+<header class="sticky top-0 z-50 w-full border-b border-slate-200/80 bg-white/95 backdrop-blur-md transition-all duration-200">
+  <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
+    {/* Brand / Logo */}
+    <a href={currentLocale === 'en' ? '/' : `/${currentLocale}/`} class="group flex items-center gap-3 focus-visible:outline-2 focus-visible:outline-cyan-600 rounded-lg">
+      <div class="relative flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-slate-900 to-slate-800 text-white shadow-md shadow-slate-900/10 ring-1 ring-white/20 transition-transform group-hover:scale-105">
+        {/* SVG Droplets Logo */}
+        <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-droplets" aria-hidden="true">
+          <path d="M7 16.3c2.2 0 4-1.83 4-4.05 0-1.16-.57-2.26-1.71-3.19S7.29 6.75 7 5.3c-.29 1.45-1.14 2.84-2.29 3.76S3 11.1 3 12.25c0 2.22 1.8 4.05 4 4.05z" stroke="#f59e0b" stroke-width="2" />
+          <path d="M12.56 6.6A10.97 10.97 0 0 0 14 3.02c.5 2.5 2 4.9 4 6.5s3 3.5 3 5.5a6.98 6.98 0 0 1-11.91 4.97" stroke="#06b6d4" stroke-width="2" />
+        </svg>
+      </div>
+      <div>
+        <span class="text-lg font-black tracking-tight text-slate-900">
+          epoxyresin<span class="text-cyan-600">-calculator</span>
+        </span>
+        <span class="hidden text-[10px] font-semibold tracking-wider text-slate-500 uppercase sm:block">
+          {t.header.subtitle}
+        </span>
+      </div>
+    </a>
+
+    {/* Language Selector Dropdown */}
+    {showLanguageSelector && (
+      <div class="flex items-center">
+        <div class="relative">
+          <label for="language-select" class="sr-only">Select Language</label>
+          <div class="flex items-center rounded-lg border border-slate-200 bg-slate-50 px-2.5 py-1.5 text-xs font-semibold text-slate-700 hover:border-slate-300 focus-within:border-cyan-600 focus-within:ring-2 focus-within:ring-cyan-600/20 transition-colors">
+            <select 
+              id="language-select" 
+              onchange="window.location.href = this.value"
+              class="bg-transparent font-medium text-slate-700 outline-none cursor-pointer pr-1"
+              aria-label="Select language"
+            >
+              {locales.map((loc) => (
+                <option value={loc.path} selected={loc.code === currentLocale}>
+                  {loc.flag} {loc.label}
+                </option>
+              ))}
+            </select>
+          </div>
+        </div>
+      </div>
+    )}
+  </div>
+</header>

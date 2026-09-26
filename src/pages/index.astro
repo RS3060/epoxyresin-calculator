@@ -1,11 +1,24 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Calculator from '../components/Calculator.astro';
+import CoverageEstimator from '../components/CoverageEstimator.astro';
+import UnitConverter from '../components/UnitConverter.astro';
+import ShapeGuide from '../components/ShapeGuide.astro';
+import ReferenceTable from '../components/ReferenceTable.astro';
+import GuideSection from '../components/GuideSection.astro';
+import SeoContent from '../components/SeoContent.astro';
+import FaqSection from '../components/FaqSection.astro';
+import PaaSection from '../components/PaaSection.astro';
 ---
 
-<Layout>
-	<Welcome />
+<Layout locale="en">
+  <Calculator currentLocale="en" />
+  <CoverageEstimator currentLocale="en" />
+  <UnitConverter currentLocale="en" />
+  <ShapeGuide currentLocale="en" />
+  <ReferenceTable currentLocale="en" />
+  <GuideSection currentLocale="en" />
+  <SeoContent currentLocale="en" />
+  <FaqSection currentLocale="en" />
+  <PaaSection currentLocale="en" />
 </Layout>

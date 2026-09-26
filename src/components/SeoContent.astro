@@ -1,0 +1,217 @@
+---
+import type { Locale } from '../i18n/translations';
+import { seoContentData } from '../i18n/seoContentData';
+
+interface Props {
+  currentLocale?: Locale;
+}
+
+const { currentLocale = 'en' } = Astro.props;
+const d = seoContentData[currentLocale] || seoContentData.en;
+---
+
+<section id="seo-guide" class="py-16 bg-white border-t border-slate-200/80">
+  <div class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+
+    {/* Section Header */}
+    <div class="text-center mb-12">
+      <div class="inline-flex items-center gap-1.5 rounded-full bg-cyan-50 px-3 py-1 text-xs font-semibold text-cyan-800 border border-cyan-200/60 mb-3">
+        <svg class="h-3.5 w-3.5 text-cyan-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10" />
+          <line x1="12" y1="16" x2="12" y2="12" />
+          <line x1="12" y1="8" x2="12.01" y2="8" />
+        </svg>
+        <span>{d.eyebrow}</span>
+      </div>
+      <h2 class="text-3xl font-black tracking-tight text-slate-900 sm:text-4xl">
+        {d.title}
+      </h2>
+      <p class="text-base text-slate-600 mt-3 max-w-3xl mx-auto leading-relaxed">
+        {d.subtitle}
+      </p>
+    </div>
+
+    {/* Article Body Container */}
+    <article class="prose prose-slate max-w-none space-y-10 text-slate-700 leading-relaxed">
+
+      {/* Intro */}
+      <div class="rounded-2xl border border-slate-200 bg-slate-50/60 p-6 sm:p-8">
+        <h3 class="text-2xl font-bold tracking-tight text-slate-900 mb-4">
+          {d.introTitle}
+        </h3>
+        <p class="mb-4">
+          {d.introP1}
+        </p>
+        <p>
+          {d.introP2}
+        </p>
+      </div>
+
+      {/* Grid: 2 Core Pillars */}
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        
+        {/* Card 1: Volume vs Weight */}
+        <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-xs">
+          <div class="flex items-center gap-2.5 mb-3">
+            <svg class="h-6 w-6 text-amber-500 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10" />
+              <path d="M12 6v6l4 2" />
+            </svg>
+            <h3 class="text-xl font-bold text-slate-900">
+              {d.card1Title}
+            </h3>
+          </div>
+          <p class="text-sm text-slate-600 mb-3">
+            {d.card1P1}
+          </p>
+          <p class="text-sm text-slate-600">
+            {d.card1P2}
+          </p>
+        </div>
+
+        {/* Card 2: Surface Coatings */}
+        <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-xs">
+          <div class="flex items-center gap-2.5 mb-3">
+            <svg class="h-6 w-6 text-cyan-600 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect width="18" height="18" x="3" y="3" rx="2" />
+              <path d="M3 9h18" />
+              <path d="M9 21V9" />
+            </svg>
+            <h3 class="text-xl font-bold text-slate-900">
+              {d.card2Title}
+            </h3>
+          </div>
+          <p class="text-sm text-slate-600 mb-3">
+            {d.card2P1}
+          </p>
+          <ul class="text-sm text-slate-600 space-y-1.5 list-disc pl-5 mb-3">
+            {d.card2List.map((item) => (
+              <li><strong>{item.title}</strong> {item.desc}</li>
+            ))}
+          </ul>
+          <p class="text-xs text-slate-500 italic">
+            {d.card2P2}
+          </p>
+        </div>
+
+      </div>
+
+      {/* Mathematical Formulas Section */}
+      <div class="rounded-2xl border border-slate-200 bg-white p-6 sm:p-8">
+        <h3 class="text-2xl font-bold tracking-tight text-slate-900 mb-4">
+          {d.formulasTitle}
+        </h3>
+        <p class="mb-6 text-slate-600">
+          {d.formulasDesc}
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+          
+          <div class="rounded-xl border border-slate-100 bg-slate-50 p-4">
+            <span class="font-bold text-slate-900 block mb-1">{d.formula1Title}</span>
+            <code class="text-xs font-mono bg-cyan-100/70 text-cyan-900 px-2 py-0.5 rounded">{d.formula1Code}</code>
+            <p class="mt-2 text-slate-600 text-xs">
+              {d.formula1Desc}
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-slate-100 bg-slate-50 p-4">
+            <span class="font-bold text-slate-900 block mb-1">{d.formula2Title}</span>
+            <code class="text-xs font-mono bg-cyan-100/70 text-cyan-900 px-2 py-0.5 rounded">{d.formula2Code}</code>
+            <p class="mt-2 text-slate-600 text-xs">
+              {d.formula2Desc}
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-slate-100 bg-slate-50 p-4">
+            <span class="font-bold text-slate-900 block mb-1">{d.formula3Title}</span>
+            <code class="text-xs font-mono bg-cyan-100/70 text-cyan-900 px-2 py-0.5 rounded">{d.formula3Code}</code>
+            <p class="mt-2 text-slate-600 text-xs">
+              {d.formula3Desc}
+            </p>
+          </div>
+
+          <div class="rounded-xl border border-slate-100 bg-slate-50 p-4">
+            <span class="font-bold text-slate-900 block mb-1">{d.formula4Title}</span>
+            <code class="text-xs font-mono bg-cyan-100/70 text-cyan-900 px-2 py-0.5 rounded">{d.formula4Code}</code>
+            <p class="mt-2 text-slate-600 text-xs">
+              {d.formula4Desc}
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+      {/* Safety Buffer & Wastage */}
+      <div class="rounded-2xl border border-slate-200 bg-slate-50/60 p-6 sm:p-8">
+        <h3 class="text-2xl font-bold tracking-tight text-slate-900 mb-3">
+          {d.bufferTitle}
+        </h3>
+        <p class="text-slate-600 mb-4">
+          {d.bufferDesc}
+        </p>
+        <ul class="space-y-2 text-sm text-slate-600 list-disc pl-5 mb-4">
+          {d.bufferPoints.map((pt) => (
+            <li><strong>{pt.title}</strong> {pt.desc}</li>
+          ))}
+        </ul>
+        <p class="text-sm text-slate-600">
+          {d.bufferConclusion}
+        </p>
+      </div>
+
+      {/* Pour Depth and Exotherm Management */}
+      <div class="rounded-2xl border border-slate-200 bg-white p-6 sm:p-8">
+        <h3 class="text-2xl font-bold tracking-tight text-slate-900 mb-3">
+          {d.exothermTitle}
+        </h3>
+        <p class="text-slate-600 mb-4">
+          {d.exothermDesc}
+        </p>
+        
+        <div class="overflow-x-auto">
+          <table class="w-full text-left text-xs sm:text-sm text-slate-600 border border-slate-200 rounded-lg overflow-hidden">
+            <thead class="bg-slate-100 text-slate-900 font-bold uppercase text-[11px] tracking-wider">
+              <tr>
+                <th class="p-3 border-b border-slate-200">{d.tableHeaders.formulation}</th>
+                <th class="p-3 border-b border-slate-200">{d.tableHeaders.depth}</th>
+                <th class="p-3 border-b border-slate-200">{d.tableHeaders.potLife}</th>
+                <th class="p-3 border-b border-slate-200">{d.tableHeaders.applications}</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-200">
+              {d.tableRows.map((row) => (
+                <tr class="hover:bg-slate-50">
+                  <td class="p-3 font-semibold text-slate-900">{row.name}</td>
+                  <td class="p-3">{row.depth}</td>
+                  <td class="p-3">{row.potLife}</td>
+                  <td class="p-3">{row.apps}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+
+        <p class="text-xs text-slate-500 mt-3">
+          {d.exothermNote}
+        </p>
+      </div>
+
+      {/* Step by Step Checklist */}
+      <div class="rounded-2xl border border-cyan-200/80 bg-cyan-50/40 p-6 sm:p-8">
+        <h3 class="text-2xl font-bold tracking-tight text-slate-900 mb-4">
+          {d.stepsTitle}
+        </h3>
+        <ol class="space-y-3 text-sm text-slate-700 list-decimal pl-5">
+          {d.steps.map((st) => (
+            <li>
+              <strong>{st.title}</strong> {st.desc}
+            </li>
+          ))}
+        </ol>
+      </div>
+
+    </article>
+
+  </div>
+</section>

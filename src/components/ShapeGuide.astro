@@ -1,0 +1,125 @@
+---
+import type { Locale } from '../i18n/translations';
+import { translations } from '../i18n/translations';
+
+interface Props {
+  currentLocale: Locale;
+}
+
+const { currentLocale } = Astro.props;
+const t = translations[currentLocale] || translations.en;
+const sg = t.shapeGuide;
+
+const loadLabels: Record<Locale, string> = {
+  en: 'Load into Calculator',
+  es: 'Cargar en la Calculadora',
+  de: 'In Rechner laden',
+  fr: 'Charger dans le Calculateur',
+  id: 'Muat ke Kalkulator',
+  it: 'Carica nel Calcolatore',
+  pt: 'Carregar na Calculadora',
+  pl: 'Załaduj do Kalkulatora',
+  ru: 'Загрузить в Калькулятор',
+  bg: 'Зареди в Калкулатора',
+};
+
+const shapes = [
+  {
+    name: t.calculator.shapes.rectangle,
+    formula: 'V = L × W × D',
+    desc: sg.rectDesc,
+    shapeId: 'rectangle',
+    icon: `<rect x="6" y="8" width="28" height="24" rx="2" stroke="currentColor" stroke-width="2" fill="none"/>`
+  },
+  {
+    name: t.calculator.shapes.circle,
+    formula: 'V = π × r² × D',
+    desc: sg.circleDesc,
+    shapeId: 'circle',
+    icon: `<circle cx="20" cy="20" r="14" stroke="currentColor" stroke-width="2" fill="none"/>`
+  },
+  {
+    name: t.calculator.shapes.riverTable,
+    formula: 'V = L × W(avg) × D',
+    desc: sg.riverDesc,
+    shapeId: 'river-table',
+    icon: `<rect x="6" y="6" width="28" height="28" rx="2" stroke="currentColor" stroke-width="2" fill="none"/><path d="M14 6c2 7-3 14 0 28M26 6c-2 7 3 14 0 28" stroke="#0891b2" stroke-width="2" fill="none"/>`
+  },
+  {
+    name: t.calculator.shapes.oval,
+    formula: 'V = π × a × b × D',
+    desc: sg.ovalDesc,
+    shapeId: 'oval',
+    icon: `<ellipse cx="20" cy="20" rx="15" ry="10" stroke="currentColor" stroke-width="2" fill="none"/>`
+  },
+  {
+    name: t.calculator.shapes.knownVolume,
+    formula: sg.waterFormula,
+    desc: sg.waterDesc,
+    shapeId: 'known-volume',
+    icon: `<path d="M20 6c-4 5-8 10-8 15a8 8 0 0 0 16 0c0-5-4-10-8-15Z" stroke="#0891b2" stroke-width="2" fill="none"/>`
+  },
+];
+---
+
+<section id="shapes" class="py-16 bg-slate-50/50 border-t border-slate-200/80">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    
+    <div class="mx-auto max-w-3xl text-center mb-12">
+      <span class="text-xs font-bold uppercase tracking-wider text-cyan-700">{sg.eyebrow}</span>
+      <h2 class="text-3xl font-black tracking-tight text-slate-900 sm:text-4xl mt-1">
+        {sg.title}
+      </h2>
+      <p class="text-base text-slate-600 mt-2">
+        {sg.subtitle}
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {shapes.map((item) => (
+        <a 
+          href="#calculator" 
+          class="shape-card-link group block rounded-2xl border border-slate-200 bg-white p-6 shadow-xs hover:border-cyan-600 hover:shadow-md transition-all focus-visible:outline-2 focus-visible:outline-cyan-600"
+          data-target-shape={item.shapeId}
+        >
+          <div class="flex items-center gap-4 mb-4">
+            <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-slate-100 text-slate-700 group-hover:bg-cyan-50 group-hover:text-cyan-700 transition-colors">
+              <svg class="h-8 w-8" viewBox="0 0 40 40" set:html={item.icon}></svg>
+            </div>
+            <div>
+              <h3 class="text-base font-bold text-slate-900 group-hover:text-cyan-700 transition-colors">
+                {item.name}
+              </h3>
+              <span class="inline-block text-xs font-mono font-bold text-cyan-700 mt-0.5">
+                {item.formula}
+              </span>
+            </div>
+          </div>
+          <p class="text-xs text-slate-600 leading-relaxed mb-4">
+            {item.desc}
+          </p>
+          <div class="flex items-center gap-1 text-xs font-bold text-cyan-600 group-hover:text-cyan-700">
+            <span>{sg.loadBtn}</span>
+            <svg class="h-3.5 w-3.5 transform group-hover:translate-x-1 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+          </div>
+        </a>
+      ))}
+    </div>
+
+  </div>
+</section>
+
+<script is:inline>
+  (function() {
+    var shapeCards = document.querySelectorAll('.shape-card-link');
+    for (var i = 0; i < shapeCards.length; i++) {
+      shapeCards[i].addEventListener('click', function(e) {
+        var shape = this.getAttribute('data-target-shape');
+        if (shape) {
+          var targetTab = document.getElementById('shape-tab-' + shape);
+          if (targetTab) targetTab.click();
+        }
+      });
+    }
+  })();
+</script>
