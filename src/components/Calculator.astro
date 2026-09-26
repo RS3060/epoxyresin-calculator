@@ -1062,27 +1062,37 @@ const c = t.calculator;
 
     // Shape Tabs
     var shapeTabs = document.querySelectorAll('.shape-tab');
+    function selectShapeTab(tab) {
+      if (!tab) return;
+      var shape = tab.getAttribute('data-shape');
+      state.shape = shape;
+      for (var k = 0; k < shapeTabs.length; k++) {
+        var t = shapeTabs[k];
+        var isKnownVol = t.getAttribute('data-shape') === 'known-volume';
+        var extraClass = isKnownVol ? ' col-span-2 sm:col-span-1' : '';
+        t.setAttribute('aria-selected', 'false');
+        t.className = 'shape-tab flex flex-col items-center justify-center gap-2 rounded-xl border-2 border-slate-200 dark:border-slate-700 bg-slate-50/50 dark:bg-slate-800/60 p-3 text-center hover:border-slate-300 dark:hover:border-slate-600 transition-all focus-visible:outline-2 focus-visible:outline-cyan-600 cursor-pointer' + extraClass;
+        var span = t.querySelector('span');
+        if (span) span.className = 'text-xs font-bold text-slate-700 dark:text-slate-200';
+        var svg = t.querySelector('svg');
+        if (svg) svg.setAttribute('class', 'h-6 w-6 text-slate-600 dark:text-slate-300');
+      }
+      var isTargetKnownVol = tab.getAttribute('data-shape') === 'known-volume';
+      var targetExtra = isTargetKnownVol ? ' col-span-2 sm:col-span-1' : '';
+      tab.setAttribute('aria-selected', 'true');
+      tab.className = 'shape-tab flex flex-col items-center justify-center gap-2 rounded-xl border-2 border-cyan-600 dark:border-cyan-400 bg-cyan-50/70 dark:bg-cyan-950/70 p-3 text-center transition-all focus-visible:outline-2 focus-visible:outline-cyan-600 cursor-pointer' + targetExtra;
+      var activeSpan = tab.querySelector('span');
+      if (activeSpan) activeSpan.className = 'text-xs font-bold text-cyan-900 dark:text-cyan-300';
+      var activeSvg = tab.querySelector('svg');
+      if (activeSvg) activeSvg.setAttribute('class', 'h-6 w-6 text-cyan-600 dark:text-cyan-400');
+
+      updateShapeVisibility();
+      calculate();
+    }
+
     for (var st = 0; st < shapeTabs.length; st++) {
       shapeTabs[st].addEventListener('click', function() {
-        var shape = this.getAttribute('data-shape');
-        state.shape = shape;
-        for (var k = 0; k < shapeTabs.length; k++) {
-          shapeTabs[k].setAttribute('aria-selected', 'false');
-          shapeTabs[k].className = 'shape-tab flex flex-col items-center justify-center gap-2 rounded-xl border-2 border-slate-200 dark:border-slate-700 bg-slate-50/50 dark:bg-slate-800/60 p-3 text-center hover:border-slate-300 dark:hover:border-slate-600 transition-all cursor-pointer';
-          var span = shapeTabs[k].querySelector('span');
-          if (span) span.className = 'text-xs font-bold text-slate-700 dark:text-slate-200';
-          var svg = shapeTabs[k].querySelector('svg');
-          if (svg) svg.className = 'h-6 w-6 text-slate-600 dark:text-slate-300';
-        }
-        this.setAttribute('aria-selected', 'true');
-        this.className = 'shape-tab flex flex-col items-center justify-center gap-2 rounded-xl border-2 border-cyan-600 dark:border-cyan-400 bg-cyan-50/70 dark:bg-cyan-950/70 p-3 text-center transition-all cursor-pointer';
-        var activeSpan = this.querySelector('span');
-        if (activeSpan) activeSpan.className = 'text-xs font-bold text-cyan-900 dark:text-cyan-300';
-        var activeSvg = this.querySelector('svg');
-        if (activeSvg) activeSvg.className = 'h-6 w-6 text-cyan-600 dark:text-cyan-400';
-
-        updateShapeVisibility();
-        calculate();
+        selectShapeTab(this);
       });
     }
 
@@ -1117,18 +1127,24 @@ const c = t.calculator;
 
     function setSplitMode(mode) {
       state.splitMode = mode;
+      var volSvg = modeVolBtn ? modeVolBtn.querySelector('svg') : null;
+      var wtSvg = modeWtBtn ? modeWtBtn.querySelector('svg') : null;
       if (mode === 'volume') {
-        modeVolBtn.className = 'mode-btn flex items-center justify-center gap-2 rounded-xl border-2 border-cyan-600 dark:border-cyan-400 bg-cyan-50/80 dark:bg-cyan-950/70 px-3 py-2 text-xs font-bold text-cyan-900 dark:text-cyan-300 transition-all';
-        modeWtBtn.className = 'mode-btn flex items-center justify-center gap-2 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50/50 dark:bg-slate-800 px-3 py-2 text-xs font-bold text-slate-700 dark:text-slate-300 hover:border-slate-300 dark:hover:border-slate-600 transition-all';
+        if (modeVolBtn) modeVolBtn.className = 'mode-btn flex items-center justify-center gap-2 rounded-xl border-2 border-cyan-600 dark:border-cyan-400 bg-cyan-50/80 dark:bg-cyan-950/70 px-3 py-2 text-xs font-bold text-cyan-900 dark:text-cyan-300 focus-visible:outline-2 focus-visible:outline-cyan-600 transition-all';
+        if (volSvg) volSvg.setAttribute('class', 'h-4 w-4 text-cyan-600 dark:text-cyan-400');
+        if (modeWtBtn) modeWtBtn.className = 'mode-btn flex items-center justify-center gap-2 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50/50 dark:bg-slate-800 px-3 py-2 text-xs font-bold text-slate-700 dark:text-slate-300 hover:border-slate-300 dark:hover:border-slate-600 focus-visible:outline-2 focus-visible:outline-cyan-600 transition-all';
+        if (wtSvg) wtSvg.setAttribute('class', 'h-4 w-4 text-slate-500 dark:text-slate-400');
       } else {
-        modeWtBtn.className = 'mode-btn flex items-center justify-center gap-2 rounded-xl border-2 border-cyan-600 dark:border-cyan-400 bg-cyan-50/80 dark:bg-cyan-950/70 px-3 py-2 text-xs font-bold text-cyan-900 dark:text-cyan-300 transition-all';
-        modeVolBtn.className = 'mode-btn flex items-center justify-center gap-2 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50/50 dark:bg-slate-800 px-3 py-2 text-xs font-bold text-slate-700 dark:text-slate-300 hover:border-slate-300 dark:hover:border-slate-600 transition-all';
+        if (modeWtBtn) modeWtBtn.className = 'mode-btn flex items-center justify-center gap-2 rounded-xl border-2 border-cyan-600 dark:border-cyan-400 bg-cyan-50/80 dark:bg-cyan-950/70 px-3 py-2 text-xs font-bold text-cyan-900 dark:text-cyan-300 focus-visible:outline-2 focus-visible:outline-cyan-600 transition-all';
+        if (wtSvg) wtSvg.setAttribute('class', 'h-4 w-4 text-cyan-600 dark:text-cyan-400');
+        if (modeVolBtn) modeVolBtn.className = 'mode-btn flex items-center justify-center gap-2 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50/50 dark:bg-slate-800 px-3 py-2 text-xs font-bold text-slate-700 dark:text-slate-300 hover:border-slate-300 dark:hover:border-slate-600 focus-visible:outline-2 focus-visible:outline-cyan-600 transition-all';
+        if (volSvg) volSvg.setAttribute('class', 'h-4 w-4 text-slate-500 dark:text-slate-400');
       }
       calculate();
     }
 
-    modeVolBtn.addEventListener('click', function() { setSplitMode('volume'); });
-    modeWtBtn.addEventListener('click', function() { setSplitMode('weight'); });
+    if (modeVolBtn) modeVolBtn.addEventListener('click', function() { setSplitMode('volume'); });
+    if (modeWtBtn) modeWtBtn.addEventListener('click', function() { setSplitMode('weight'); });
 
     // Quick Template Presets
     var presetBtns = document.querySelectorAll('.preset-btn');
@@ -1163,7 +1179,7 @@ const c = t.calculator;
 
         // Select shape tab
         var targetTab = document.getElementById('shape-tab-' + shape);
-        if (targetTab) targetTab.click();
+        if (targetTab) selectShapeTab(targetTab);
 
         // Select ratio button
         var targetRatio = document.querySelector('.ratio-btn[data-ratio="' + ratio + '"]');
@@ -1197,7 +1213,7 @@ const c = t.calculator;
         if (densityBInput) densityBInput.value = '1.00';
 
         var targetTab = document.getElementById('shape-tab-rectangle');
-        if (targetTab) targetTab.click();
+        if (targetTab) selectShapeTab(targetTab);
 
         var targetRatio = document.querySelector('.ratio-btn[data-ratio="2:1"]');
         if (targetRatio) targetRatio.click();
