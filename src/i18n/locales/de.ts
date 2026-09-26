@@ -247,45 +247,6 @@ export const de: Translations = {
     terms: 'Allgemeine Geschäftsbedingungen',
     allRightsReserved: 'Alle Rechte vorbehalten.',
   },
-  faq: {
-    tag: 'Fundierte Antworten',
-    title: 'Häufig gestellte Fragen zum Epoxidharz Rechner',
-    subtitle: 'Wissenswertes rund um Harzberechnung, Mischungsverhältnisse, Topfzeit und Verarbeitung.',
-    items: [
-      {
-        q: 'Was ist ein Epoxidharz Rechner?',
-        a: 'Ein Rechner ermittelt präzise die benötigte Menge an Harz und Härter anhand der Formmaße und des Mischungsverhältnisses, um Materialverschwendung zu vermeiden.',
-      },
-      {
-        q: 'Wie viel Epoxidharz brauche ich für mein Projekt?',
-        a: 'Länge, Breite und Tiefe in Zentimetern multiplizieren, um das Volumen in Millilitern zu erhalten. Für ein Tablett von 30 × 30 × 1 cm benötigen Sie 900 ml Harzgemisch.',
-      },
-      {
-        q: 'Wie berechnet man Epoxidharz richtig?',
-        a: 'Nutzen Sie Länge × Breite × Dicke für Rechtecke oder π × r² × Tiefe für runde Formen, und teilen Sie die Menge nach dem Mischungsverhältnis auf.',
-      },
-      {
-        q: 'Wie viel Härter muss zum Harz gemischt werden?',
-        a: 'Halten Sie sich stets an die Angaben auf der Flasche. Bei 1:1 zu gleichen Teilen, bei 2:1 halb so viel Härter wie Harz. Präzision ist entscheidend.',
-      },
-      {
-        q: 'Wie lange muss man Epoxidharz rühren?',
-        a: 'Mindestens 3 Minuten langsam und gründlich rühren. Dabei Rand und Boden des Bechers abstreifen, damit sich beide Komponenten vollständig verbinden.',
-      },
-      {
-        q: 'Wie dick darf man Epoxidharz auf einmal gießen?',
-        a: 'Standard-Laminierharz: 3–6 mm pro Schicht. Spezielles Deep-Pour-Gießharz: 2–5 cm pro Schicht.',
-      },
-      {
-        q: 'Ist ausgehärtetes Epoxidharz wasserdicht?',
-        a: 'Ja, vollständig durchgehärtetes Epoxidharz ist absolut wasserfest. Die Aushärtung dauert je nach Harz 24 bis 72 Stunden.',
-      },
-      {
-        q: 'Warum bleibt mein Epoxidharz klebrig oder weich?',
-        a: 'Ursachen sind falsches Mischungsverhältnis, unzureichendes Rühren, zu kalte Raumtemperatur oder abgelaufenes Harz.',
-      },
-    ],
-  },
   paa: {
     tag: 'Fachwissen',
     title: 'Werkstatt-Fragen zu Epoxidharz Berechnungen',

@@ -247,45 +247,6 @@ export const fr: Translations = {
     terms: 'Conditions Générales',
     allRightsReserved: 'Tous droits réservés.',
   },
-  faq: {
-    tag: 'Réponses Clés',
-    title: 'Questions Fréquentes sur le Calculateur de Résine',
-    subtitle: 'Tout savoir sur le calcul de résine, ratios de mélange, temps de séchage et précaution d\'usage.',
-    items: [
-      {
-        q: 'Qu\'est-ce qu\'un calculateur de résine époxy ?',
-        a: 'C\'est un outil qui calcule la quantité exacte de résine et de durcisseur en fonction des dimensions du moule et du ratio requis, évitant le gaspillage.',
-      },
-      {
-        q: 'Combien de résine faut-il pour mon projet ?',
-        a: 'Mesurez la longueur, la largeur et l\'épaisseur en centimètres et multipliez-les pour obtenir les millilitres. Pour un plateau de 30 × 30 × 1 cm, comptez 900 ml.',
-      },
-      {
-        q: 'Comment calculer le dosage avec précision ?',
-        a: 'Multipliez Longueur × Largeur × Épaisseur pour les rectangles, ou π × r² × Épaisseur pour les cercles, puis divisez selon le ratio de votre résine.',
-      },
-      {
-        q: 'Combien de durcisseur ajouter à la résine ?',
-        a: 'Suivez scrupuleusement l\'étiquette. Pour 1:1 parts égales ; pour 2:1 deux fois moins de durcisseur que de résine. La précision au gramme est requise.',
-      },
-      {
-        q: 'Combien de temps faut-il mélanger la résine ?',
-        a: 'Mélangez lentement pendant au moins 3 minutes en raclant régulièrement les bords et le fond du pot pour une polymérisation homogène.',
-      },
-      {
-        q: 'Quelle épaisseur maximale par coulée ?',
-        a: 'Résine de glaçage classique : 3 à 6 mm par couche. Résine de coulée lente en forte épaisseur : 2 à 5 cm par coulée.',
-      },
-      {
-        q: 'La résine époxy est-elle étanche une fois sèche ?',
-        a: 'Oui, une fois totalement polymérisée (24 à 72 heures selon la température), la résine époxy est parfaitement étanche et imperméable.',
-      },
-      {
-        q: 'Pourquoi ma résine reste-t-elle collante ou molle ?',
-        a: 'Cela provient généralement d\'un mauvais ratio, d\'un mélange insuffisant, d\'une pièce trop froide ou d\'un produit périmé.',
-      },
-    ],
-  },
   paa: {
     tag: 'Expertise Atelier',
     title: 'Questions d\'Atelier Fréquemment Posées sur la Résine',

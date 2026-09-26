@@ -247,45 +247,6 @@ export const it: Translations = {
     terms: 'Termini e Condizioni',
     allRightsReserved: 'Tutti i diritti riservati.',
   },
-  faq: {
-    tag: 'Risposte Chiare',
-    title: 'Domande Frequenti sul Calcolatore di Resina',
-    subtitle: 'I dubbi più frequenti su calcolo dei volumi, rapporti, tempi di catalisi e polimerizzazione.',
-    items: [
-      {
-        q: 'Cos\'è un calcolatore per resina epossidica?',
-        a: 'È uno strumento per determinare l\'esatta quantità di resina e indurente in base alle dimensioni dello stampo e al rapporto indicato dal produttore, evitando sprechi.',
-      },
-      {
-        q: 'Quanta resina mi serve per il mio progetto?',
-        a: 'Moltiplica lunghezza, larghezza e profondità in cm per ottenere il volume in millilitri. Per un vassoio di 30 × 30 × 1 cm occorrono 900 ml di mix.',
-      },
-      {
-        q: 'Come calcolare la quantità con precisione?',
-        a: 'Usa Lunghezza × Larghezza × Spessore per forme squadrate, oppure π × r² × Altezza per forme circolari, poi ripartisci secondo il rapporto di catalisi.',
-      },
-      {
-        q: 'Quanto indurente bisogna mescolare con la resina?',
-        a: 'Segui sempre l\'etichetta del produttore. Per rapporto 1:1 parti uguali; per 2:1 metà indurente rispetto alla resina. La precisione è fondamentale.',
-      },
-      {
-        q: 'Per quanto tempo va mescolata la resina?',
-        a: 'Mescola lentamente per almeno 3 minuti, raschiando con cura le pareti e il fondo del recipiente per una miscelazione omogenea.',
-      },
-      {
-        q: 'Qual è lo spessore massimo per singola colata?',
-        a: 'Resina da finitura o da rivestimento: 3–6 mm a strato. Resina da colata ad alto spessore: da 2 a 5 cm per strato.',
-      },
-      {
-        q: 'La resina epossidica una volta indurita è impermeabile?',
-        a: 'Sì, dopo la polimerizzazione completa (24–72 ore in base alla temperatura dell\'ambiente), la resina è al 100% impermeabile all\'acqua.',
-      },
-      {
-        q: 'Perché la mia resina è rimasta appiccicosa o morbida?',
-        a: 'Le cause più frequenti sono un rapporto di miscelazione errato, miscelazione troppo rapida o insufficiente, stanza troppo fredda o prodotto scaduto.',
-      },
-    ],
-  },
   paa: {
     tag: 'Esperienza di Laboratorio',
     title: 'Domande Tecniche di Falegnameria sulla Resina',

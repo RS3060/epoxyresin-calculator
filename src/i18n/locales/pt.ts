@@ -247,45 +247,6 @@ export const pt: Translations = {
     terms: 'Termos e Condições',
     allRightsReserved: 'Todos os direitos reservados.',
   },
-  faq: {
-    tag: 'Respostas Confiáveis',
-    title: 'Perguntas Frequentes sobre a Calculadora de Resina',
-    subtitle: 'Dúvidas comuns sobre cálculo de resina, proporções, catalisação e tempo de cura.',
-    items: [
-      {
-        q: 'O que é uma calculadora de resina epóxi?',
-        a: 'É uma ferramenta para determinar a quantidade exata de resina e endurecedor com base nas medidas do molde e proporção indicada, evitando desperdícios.',
-      },
-      {
-        q: 'Quanta resina eu preciso para o meu projeto?',
-        a: 'Meça comprimento, largura e espessura em cm e multiplique os três para obter os mililitros. Para uma bandeja de 30 × 30 × 1 cm, são necessários 900 ml.',
-      },
-      {
-        q: 'Como calcular resina com precisão?',
-        a: 'Multiplique Comprimento × Largura × Espessura para formatos retangulares ou π × r² × Espessura para formatos circulares, dividindo conforme a proporção de mistura.',
-      },
-      {
-        q: 'Quanto endurecedor devo misturar com a resina?',
-        a: 'Siga sempre a embalagem do fabricante. Para 1:1 volumes iguais; para 2:1 metade da quantidade de endurecedor em relação à resina.',
-      },
-      {
-        q: 'Por quanto tempo devo misturar a resina?',
-        a: 'Misture lentamente durante pelo menos 3 minutos, raspando as laterais e o fundo do recipiente para uma homogeneização completa.',
-      },
-      {
-        q: 'Qual a espessura máxima por camada?',
-        a: 'Resina de acabamento ou vidro líquido: 3 a 6 mm por camada. Resina para vazamento profundo: 2 a 5 cm por camada.',
-      },
-      {
-        q: 'A resina epóxi é à prova d\'água depois de seca?',
-        a: 'Sim. Após a cura completa (24 a 72 horas, dependendo do produto e da temperatura), a resina epóxi é 100% impermeável.',
-      },
-      {
-        q: 'Por que a resina ficou pegajosa ou mole?',
-        a: 'Acontece por proporção incorreta, mistura insuficiente, temperatura ambiente muito baixa ou produto fora do prazo de validade.',
-      },
-    ],
-  },
   paa: {
     tag: 'Dicas de Oficina',
     title: 'Dúvidas Técnicas de Oficina sobre Resina',

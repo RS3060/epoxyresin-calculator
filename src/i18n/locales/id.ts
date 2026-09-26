@@ -247,45 +247,6 @@ export const id: Translations = {
     terms: 'Syarat & Ketentuan',
     allRightsReserved: 'Hak cipta dilindungi.',
   },
-  faq: {
-    tag: 'Jawaban Pasti',
-    title: 'FAQ Kalkulator Resin Epoksi',
-    subtitle: 'Pertanyaan umum seputar perhitungan takaran resin, rasio, waktu pengeringan, dan cara kerja.',
-    items: [
-      {
-        q: 'Apa itu kalkulator resin epoksi?',
-        a: 'Kalkulator resin adalah alat untuk menghitung jumlah resin dan pengeras yang tepat berdasarkan dimensi cetakan dan rasio pabrik guna menghindari pemborosan.',
-      },
-      {
-        q: 'Berapa banyak resin yang saya butuhkan?',
-        a: 'Ukur panjang, lebar, dan kedalaman dalam sentimeter, lalu kalikan ketiganya untuk mendapatkan volume dalam mililiter. Nampan 30 × 30 × 1 cm membutuhkan 900 ml.',
-      },
-      {
-        q: 'Bagaimana cara menghitung kebutuhan resin dengan tepat?',
-        a: 'Gunakan Panjang × Lebar × Tebal untuk bentuk kotak atau π × r² × Tebal untuk lingkaran, lalu bagi sesuai rasio campuran kit resin Anda.',
-      },
-      {
-        q: 'Berapa banyak pengeras yang harus dicampurkan?',
-        a: 'Ikuti label kemasan resin Anda. Untuk rasio 1:1 gunakan takaran sama; untuk 2:1 gunakan setengah takaran pengeras dibanding resin. Ketelitian sangat penting.',
-      },
-      {
-        q: 'Berapa lama harus mengaduk resin?',
-        a: 'Aduk perlahan selama minimal 3 menit. Kerik bagian pinggir dan dasar wadah agar resin dan pengeras menyatu secara menyeluruh tanpa menghasilkan banyak buih.',
-      },
-      {
-        q: 'Berapa ketebalan maksimal pengecoran resin?',
-        a: 'Resin pelapis (coating): 3–6 mm per lapisan. Resin cor tebal (pengecoran tebal): 2–5 cm per lapisan.',
-      },
-      {
-        q: 'Apakah resin epoksi tahan air setelah kering?',
-        a: 'Ya, resin epoksi yang telah kering sempurna 100% tahan air dan kedap cairan. Pengeringan penuh butuh waktu 24 hingga 72 jam.',
-      },
-      {
-        q: 'Mengapa resin saya tetap lengket atau lembek?',
-        a: 'Resin lengket disebabkan oleh rasio yang salah, pengadukan kurang rata, suhu ruangan terlalu dingin, atau produk sudah kedaluwarsa.',
-      },
-    ],
-  },
   paa: {
     tag: 'Wawasan Ahli',
     title: 'Pertanyaan Teknis Bengkel Kayu Seputar Resin',

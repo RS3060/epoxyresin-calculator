@@ -247,45 +247,6 @@ export const pl: Translations = {
     terms: 'Regulamin i Warunki',
     allRightsReserved: 'Wszelkie prawa zastrzeżone.',
   },
-  faq: {
-    tag: 'Rzetelne Odpowiedzi',
-    title: 'Najczęściej Zadawane Pytania o Kalkulator Żywicy',
-    subtitle: 'Wszystko o obliczaniu objętości, proporcjach, czasie utwardzania i doborze żywicy.',
-    items: [
-      {
-        q: 'Czym jest kalkulator żywicy epoksydowej?',
-        a: 'To narzędzie obliczające precyzyjną ilość żywicy i utwardzacza na podstawie wymiarów formy i zaleceń producenta, co zapobiega stratom materiału.',
-      },
-      {
-        q: 'Ile żywicy potrzebuję do mojego projektu?',
-        a: 'Zmierz długość, szerokość i głębokość w centymetrach i pomnóż je, aby otrzymać mililitry. Na tacę 30 × 30 × 1 cm potrzeba 900 ml żywicy.',
-      },
-      {
-        q: 'Jak precyzyjnie obliczyć ilość żywicy?',
-        a: 'Użyj wzoru Długość × Szerokość × Grubość dla prostokątów lub π × r² × Grubość dla kół, a następnie podziel według proporcji mieszania.',
-      },
-      {
-        q: 'Ile utwardzacza dodać do żywicy?',
-        a: 'Stosuj się do etykiety producenta. Przy 1:1 równe części; przy 2:1 połowa utwardzacza w stosunku do żywicy. Dokładność jest kluczowa.',
-      },
-      {
-        q: 'Jak długo należy mieszać żywicę?',
-        a: 'Mieszaj powoli przez co najmniej 3 minuty, dokładnie zbierając materiał ze ścianek i dna kubka, aby składniki w pełni się połączyły.',
-      },
-      {
-        q: 'Jaką maksymalną grubość można wylać naraz?',
-        a: 'Zwykła żywica powłokowa: 3–6 mm na warstwę. Żywica do głębokich odlewów: 2–5 cm na jedną warstwę.',
-      },
-      {
-        q: 'Czy żywica epoksydowa jest wodoodporna po utwardzeniu?',
-        a: 'Tak, po pełnym utwardzeniu (zwykle 24–72 godziny) żywica epoksydowa jest w 100% wodoodporna.',
-      },
-      {
-        q: 'Dlaczego moja żywica jest lepka lub miękka?',
-        a: 'Powodem są nieprawidłowe proporcje, niedokładne wymieszanie, zbyt niska temperatura w pracowni lub przeterminowany produkt.',
-      },
-    ],
-  },
   paa: {
     tag: 'Wiedza Warsztatowa',
     title: 'Techniczne Pytania o Odlewy z Żywicy Epoksydowej',

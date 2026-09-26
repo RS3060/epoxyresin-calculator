@@ -247,45 +247,6 @@ export const es: Translations = {
     terms: 'Términos y Condiciones',
     allRightsReserved: 'Todos los derechos reservados.',
   },
-  faq: {
-    tag: 'Respuestas Clave',
-    title: 'Preguntas Frecuentes sobre la Calculadora de Resina',
-    subtitle: 'Dudas habituales sobre cálculo de resina, proporciones de mezcla, curado y uso de la herramienta.',
-    items: [
-      {
-        q: '¿Qué es una calculadora de resina epoxi?',
-        a: 'Es una herramienta que calcula la cantidad exacta de resina y endurecedor según las medidas del molde y la proporción requerida, evitando desperdicios.',
-      },
-      {
-        q: '¿Cuánta resina necesito para mi proyecto?',
-        a: 'Mida largo, ancho y espesor en centímetros y multiplíquelos para obtener el volumen en mililitros. Por ejemplo, una bandeja de 30 × 30 × 1 cm requiere 900 ml.',
-      },
-      {
-        q: '¿Cómo calculo la cantidad exacta de resina?',
-        a: 'Multiplique Largo × Ancho × Profundidad para formas rectangulares, o π × r² × Profundidad para círculos, y divida según su proporción de mezcla.',
-      },
-      {
-        q: '¿Cuánto endurecedor debo mezclar con la resina?',
-        a: 'Siga las instrucciones del fabricante. Para 1:1 partes iguales; para 2:1 la mitad de endurecedor respecto a resina. La precisión es indispensable.',
-      },
-      {
-        q: '¿Cuánto tiempo hay que mezclar la resina?',
-        a: 'Mezcle suavemente durante al menos 3 minutos, raspando los bordes y el fondo del vaso para integrar ambos componentes por completo.',
-      },
-      {
-        q: '¿Qué grosor máximo se puede verter por capa?',
-        a: 'Resina estándar de acabado: 3 a 6 mm por capa. Resina de colada profunda: 2 a 5 cm por capa.',
-      },
-      {
-        q: '¿La resina epoxi es impermeable una vez curada?',
-        a: 'Sí, la resina epoxi totalmente curada es 100% impermeable y resistente al agua tras 24 a 72 horas.',
-      },
-      {
-        q: '¿Por qué mi resina queda pegajosa o blanda?',
-        a: 'Ocurre por una proporción incorrecta, mezcla insuficiente, temperatura baja en el taller o producto vencido.',
-      },
-    ],
-  },
   paa: {
     tag: 'Conocimiento Experto',
     title: 'Preguntas Frecuentes de Taller sobre Resina Epoxi',

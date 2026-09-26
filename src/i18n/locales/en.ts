@@ -247,45 +247,6 @@ export const en: Translations = {
     terms: 'Terms & Conditions',
     allRightsReserved: 'All rights reserved.',
   },
-  faq: {
-    tag: 'Authoritative Answers',
-    title: 'Resin Calculator FAQ',
-    subtitle: 'Common questions about epoxy resin calculations, mixing ratios, curing time, and the resin calculator.',
-    items: [
-      {
-        q: 'What Is a Resin Calculator?',
-        a: 'A resin calculator computes how much epoxy resin and hardener you need based on your mold dimensions and mixing ratio. It saves time and prevents waste.',
-      },
-      {
-        q: 'How Much Resin Do I Need?',
-        a: 'Measure length, width, and depth in centimeters, multiply them together to get the volume in milliliters. For a 30 × 30 × 1 cm tray, you need 900 ml of mixed resin.',
-      },
-      {
-        q: 'How Do I Calculate How Much Resin I Need?',
-        a: 'Use Volume = L × W × D for rectangles or Volume = π × r² × D for circles, then split by your mixing ratio to get resin and hardener amounts.',
-      },
-      {
-        q: 'How Much Hardener Should I Mix With Resin?',
-        a: 'Follow your product label. For a 1:1 ratio, use equal parts. For a 2:1 ratio, use half as much hardener as resin. Accurate measurement is critical.',
-      },
-      {
-        q: 'How Long Do You Mix Resin?',
-        a: 'Mix slowly for at least 3 minutes. Scrape the sides and bottom of your mixing cup to make sure all resin and hardener are fully combined.',
-      },
-      {
-        q: 'How Thick Can Resin Be Poured?',
-        a: 'Standard coating resin: 3–6 mm per layer. Deep-pour casting resin: 2–4 cm per layer. Check your product\'s maximum pour depth.',
-      },
-      {
-        q: 'Is Epoxy Resin Waterproof?',
-        a: 'Yes. Fully cured epoxy resin is waterproof. Most take 24–72 hours to fully cure, depending on temperature and thickness.',
-      },
-      {
-        q: 'Why Is My Resin Sticky?',
-        a: 'Sticky resin means incomplete curing. Common causes: wrong mixing ratio, not enough mixing time, cold workspace, or expired product.',
-      },
-    ],
-  },
   paa: {
     tag: 'Expert Workshop Knowledge',
     title: 'Frequently Asked Epoxy & Resin Calculation Questions',

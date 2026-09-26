@@ -106,8 +106,8 @@ const articleSchema = {
   }
 };
 
-const faqData = t.faq || translations.en.faq;
-const faqSchema = {
+const faqData = t.faq;
+const faqSchema = faqData ? {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
   'mainEntity': faqData.items.map((item) => ({
@@ -118,7 +118,7 @@ const faqSchema = {
       'text': item.a
     }
   }))
-};
+} : null;
 
 const ogLocales: Record<Locale, string> = {
   en: 'en_US',
@@ -207,7 +207,7 @@ const ogLocales: Record<Locale, string> = {
 
     {/* JSON-LD Structured Data Schemas */}
     <script type="application/ld+json" set:html={JSON.stringify(webAppSchema)} />
-    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+    {faqSchema && <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />}
     <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
     <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
   </head>
