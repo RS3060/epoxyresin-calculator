@@ -98,7 +98,7 @@ const shapes = [
           <p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed mb-4">
             {item.desc}
           </p>
-          <div class="flex items-center gap-1 text-xs font-bold text-cyan-600 dark:text-cyan-400 group-hover:text-cyan-700 dark:group-hover:text-cyan-300">
+          <div class="flex items-center gap-1 text-xs font-bold text-cyan-700 dark:text-cyan-400 group-hover:text-cyan-800 dark:group-hover:text-cyan-300">
             <span>{sg.loadBtn}</span>
             <svg class="h-3.5 w-3.5 transform group-hover:translate-x-1 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
           </div>
@@ -109,7 +109,7 @@ const shapes = [
   </div>
 </section>
 
-<script is:inline>
+<script>
   (function() {
     var shapeCards = document.querySelectorAll('.shape-card-link');
     for (var i = 0; i < shapeCards.length; i++) {

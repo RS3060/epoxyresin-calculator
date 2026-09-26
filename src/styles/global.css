@@ -73,3 +73,15 @@ html.dark :focus-visible {
   outline: 2px solid #22d3ee;
   outline-offset: 2px;
 }
+
+/* Defer rendering of below-the-fold sections for instant FCP/LCP and minimal style calculation time */
+#coverage,
+#converter,
+#shapes,
+#reference-table,
+#guides,
+#seo-guide,
+#faq {
+  content-visibility: auto;
+  contain-intrinsic-size: 1px 700px;
+}

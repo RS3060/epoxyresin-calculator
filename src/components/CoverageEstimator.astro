@@ -79,17 +79,17 @@ const cov = t.coverage;
             <label for="cov-input-depth" class="text-xs font-bold text-slate-700 dark:text-slate-200">
               {cov.depth} (mm)
             </label>
-            <span class="text-[11px] text-slate-400">1 mm ≈ 1/25" • 2 mm ≈ 1/12"</span>
+            <span class="text-[11px] text-slate-600 dark:text-slate-400 font-medium">1 mm ≈ 1/25" • 2 mm ≈ 1/12"</span>
           </div>
 
           <div class="grid grid-cols-3 gap-2 mb-2.5">
-            <button type="button" class="cov-preset-btn rounded-lg border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 py-1.5 text-xs font-bold text-slate-700 dark:text-slate-200 hover:border-slate-300 dark:hover:border-slate-600 focus-visible:outline-2 focus-visible:outline-cyan-600 transition-all" data-mm="1">
+            <button type="button" class="cov-preset-btn rounded-lg border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 min-h-[40px] py-2 text-xs font-bold text-slate-700 dark:text-slate-200 hover:border-slate-300 dark:hover:border-slate-600 focus-visible:outline-2 focus-visible:outline-cyan-600 transition-all cursor-pointer" data-mm="1">
               {cov.presets.seal}
             </button>
-            <button type="button" class="cov-preset-btn rounded-lg border-2 border-cyan-600 dark:border-cyan-400 bg-cyan-50/80 dark:bg-cyan-950/70 py-1.5 text-xs font-bold text-cyan-900 dark:text-cyan-300 focus-visible:outline-2 focus-visible:outline-cyan-600 transition-all" data-mm="2">
+            <button type="button" class="cov-preset-btn rounded-lg border-2 border-cyan-600 dark:border-cyan-400 bg-cyan-50/80 dark:bg-cyan-950/70 min-h-[40px] py-2 text-xs font-bold text-cyan-900 dark:text-cyan-300 focus-visible:outline-2 focus-visible:outline-cyan-600 transition-all cursor-pointer" data-mm="2">
               {cov.presets.flood}
             </button>
-            <button type="button" class="cov-preset-btn rounded-lg border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 py-1.5 text-xs font-bold text-slate-700 dark:text-slate-200 hover:border-slate-300 dark:hover:border-slate-600 focus-visible:outline-2 focus-visible:outline-cyan-600 transition-all" data-mm="3">
+            <button type="button" class="cov-preset-btn rounded-lg border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 min-h-[40px] py-2 text-xs font-bold text-slate-700 dark:text-slate-200 hover:border-slate-300 dark:hover:border-slate-600 focus-visible:outline-2 focus-visible:outline-cyan-600 transition-all cursor-pointer" data-mm="3">
               {cov.presets.art}
             </button>
           </div>
@@ -110,10 +110,10 @@ const cov = t.coverage;
         <div>
           <label class="block text-xs font-bold text-slate-700 dark:text-slate-200 mb-1.5">{cov.safetyBufferLabel}</label>
           <div class="flex items-center gap-2">
-            <button type="button" class="cov-waste-btn flex-1 rounded-lg border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 py-1 text-xs font-bold text-slate-700 dark:text-slate-200 hover:border-slate-300 dark:hover:border-slate-600" data-waste="0">0%</button>
-            <button type="button" class="cov-waste-btn flex-1 rounded-lg border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 py-1 text-xs font-bold text-slate-700 dark:text-slate-200 hover:border-slate-300 dark:hover:border-slate-600" data-waste="5">5%</button>
-            <button type="button" class="cov-waste-btn flex-1 rounded-lg border-2 border-cyan-600 dark:border-cyan-400 bg-cyan-50/80 dark:bg-cyan-950/70 py-1 text-xs font-bold text-cyan-900 dark:text-cyan-300" data-waste="10">10%</button>
-            <button type="button" class="cov-waste-btn flex-1 rounded-lg border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 py-1 text-xs font-bold text-slate-700 dark:text-slate-200 hover:border-slate-300 dark:hover:border-slate-600" data-waste="15">15%</button>
+            <button type="button" class="cov-waste-btn flex-1 rounded-lg border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 min-h-[40px] py-2 text-xs font-bold text-slate-700 dark:text-slate-200 hover:border-slate-300 dark:hover:border-slate-600 cursor-pointer transition-all" data-waste="0">0%</button>
+            <button type="button" class="cov-waste-btn flex-1 rounded-lg border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 min-h-[40px] py-2 text-xs font-bold text-slate-700 dark:text-slate-200 hover:border-slate-300 dark:hover:border-slate-600 cursor-pointer transition-all" data-waste="5">5%</button>
+            <button type="button" class="cov-waste-btn flex-1 rounded-lg border-2 border-cyan-600 dark:border-cyan-400 bg-cyan-50/80 dark:bg-cyan-950/70 min-h-[40px] py-2 text-xs font-bold text-cyan-900 dark:text-cyan-300 cursor-pointer transition-all" data-waste="10">10%</button>
+            <button type="button" class="cov-waste-btn flex-1 rounded-lg border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 min-h-[40px] py-2 text-xs font-bold text-slate-700 dark:text-slate-200 hover:border-slate-300 dark:hover:border-slate-600 cursor-pointer transition-all" data-waste="15">15%</button>
           </div>
         </div>
 
@@ -182,7 +182,7 @@ const cov = t.coverage;
   </div>
 </section>
 
-<script is:inline>
+<script>
   (function() {
     var factors = { cm: 1, in: 2.54, m: 100, ft: 30.48 };
     var ML_PER_FL_OZ = 29.5735295625;

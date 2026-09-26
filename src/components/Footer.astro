@@ -43,13 +43,13 @@ const homePrefix = isHome ? '' : (currentLocale === 'en' ? '/' : `/${currentLoca
             </svg>
           </div>
           <span class="text-base font-black tracking-tight text-slate-900 dark:text-white">
-            epoxyresin<span class="text-cyan-600 dark:text-cyan-400">-calculator</span>
+            epoxyresin<span class="text-cyan-700 dark:text-cyan-400">-calculator</span>
           </span>
         </a>
-        <p class="text-xs text-slate-500 dark:text-slate-400 max-w-md leading-relaxed">
+        <p class="text-xs text-slate-600 dark:text-slate-400 max-w-md leading-relaxed">
           {f.tagline}
         </p>
-        <p class="text-[11px] text-slate-400 dark:text-slate-500 max-w-md leading-normal">
+        <p class="text-[11px] text-slate-600 dark:text-slate-400 max-w-md leading-normal">
           {f.legalNote}
         </p>
       </div>
@@ -57,26 +57,26 @@ const homePrefix = isHome ? '' : (currentLocale === 'en' ? '/' : `/${currentLoca
       {/* Column 2: Navigation & Quick Links */}
       <div class="space-y-2">
         <span class="text-xs font-bold uppercase tracking-wider text-slate-900 dark:text-white">{f.calculationsTitle}</span>
-        <ul class="space-y-1.5 text-xs">
-          <li><a href={`${homePrefix}#calculator`} class="hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors">{t.nav.calculator}</a></li>
-          <li><a href={`${homePrefix}#coverage`} class="hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors">{t.nav.coverage}</a></li>
-          <li><a href={`${homePrefix}#reference-table`} class="hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors">{t.nav.referenceTable}</a></li>
-          <li><a href={`${homePrefix}#guides`} class="hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors">{t.nav.guides}</a></li>
-          <li><a href={`${homePrefix}#seo-guide`} class="hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors">{t.nav.resinGuide || 'Resin Calculator Guide'}</a></li>
-          <li><a href={`${homePrefix}#faq`} class="hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors">{t.nav.faq}</a></li>
+        <ul class="space-y-1 text-xs">
+          <li><a href={`${homePrefix}#calculator`} class="inline-flex items-center min-h-[44px] py-1 text-slate-600 dark:text-slate-400 hover:text-cyan-700 dark:hover:text-cyan-300 transition-colors">{t.nav.calculator}</a></li>
+          <li><a href={`${homePrefix}#coverage`} class="inline-flex items-center min-h-[44px] py-1 text-slate-600 dark:text-slate-400 hover:text-cyan-700 dark:hover:text-cyan-300 transition-colors">{t.nav.coverage}</a></li>
+          <li><a href={`${homePrefix}#reference-table`} class="inline-flex items-center min-h-[44px] py-1 text-slate-600 dark:text-slate-400 hover:text-cyan-700 dark:hover:text-cyan-300 transition-colors">{t.nav.referenceTable}</a></li>
+          <li><a href={`${homePrefix}#guides`} class="inline-flex items-center min-h-[44px] py-1 text-slate-600 dark:text-slate-400 hover:text-cyan-700 dark:hover:text-cyan-300 transition-colors">{t.nav.guides}</a></li>
+          <li><a href={`${homePrefix}#seo-guide`} class="inline-flex items-center min-h-[44px] py-1 text-slate-600 dark:text-slate-400 hover:text-cyan-700 dark:hover:text-cyan-300 transition-colors">{t.nav.resinGuide || 'Resin Calculator Guide'}</a></li>
+          <li><a href={`${homePrefix}#faq`} class="inline-flex items-center min-h-[44px] py-1 text-slate-600 dark:text-slate-400 hover:text-cyan-700 dark:hover:text-cyan-300 transition-colors">{t.nav.faq}</a></li>
         </ul>
       </div>
 
       {/* Column 3: Languages & Legal */}
       <div class="space-y-2">
         <span class="text-xs font-bold uppercase tracking-wider text-slate-900 dark:text-white">{f.languagesTitle}</span>
-        <div class="flex flex-wrap gap-1.5 mb-3">
+        <div class="flex flex-wrap gap-2 mb-3">
           {locales.map((loc) => (
             <a 
               href={loc.path} 
-              class={`rounded px-2 py-1 text-[11px] font-semibold transition-colors ${
+              class={`rounded-md px-3 py-1.5 text-xs font-semibold inline-flex items-center min-h-[40px] transition-colors ${
                 loc.code === currentLocale 
-                  ? 'bg-cyan-100 text-cyan-800 dark:bg-cyan-950 dark:text-cyan-300 dark:border dark:border-cyan-800' 
+                  ? 'bg-cyan-100 text-cyan-900 dark:bg-cyan-950 dark:text-cyan-200 dark:border dark:border-cyan-800' 
                   : 'bg-slate-100 dark:bg-slate-900 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-800 border border-transparent dark:border-slate-800'
               }`}
             >
@@ -84,18 +84,18 @@ const homePrefix = isHome ? '' : (currentLocale === 'en' ? '/' : `/${currentLoca
             </a>
           ))}
         </div>
-        <ul class="space-y-1.5 text-xs">
-          <li><a href="/about" class="hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors">{f.aboutUs}</a></li>
-          <li><a href="/contact" class="hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors">{f.contactUs}</a></li>
-          <li><a href="/privacy-policy" class="hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors">{f.privacy}</a></li>
-          <li><a href="/terms" class="hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors">{f.terms}</a></li>
+        <ul class="space-y-1 text-xs">
+          <li><a href="/about" class="inline-flex items-center min-h-[44px] py-1 text-slate-600 dark:text-slate-400 hover:text-cyan-700 dark:hover:text-cyan-300 transition-colors">{f.aboutUs}</a></li>
+          <li><a href="/contact" class="inline-flex items-center min-h-[44px] py-1 text-slate-600 dark:text-slate-400 hover:text-cyan-700 dark:hover:text-cyan-300 transition-colors">{f.contactUs}</a></li>
+          <li><a href="/privacy-policy" class="inline-flex items-center min-h-[44px] py-1 text-slate-600 dark:text-slate-400 hover:text-cyan-700 dark:hover:text-cyan-300 transition-colors">{f.privacy}</a></li>
+          <li><a href="/terms" class="inline-flex items-center min-h-[44px] py-1 text-slate-600 dark:text-slate-400 hover:text-cyan-700 dark:hover:text-cyan-300 transition-colors">{f.terms}</a></li>
         </ul>
       </div>
 
     </div>
 
     {/* Bottom Bar */}
-    <div class="border-t border-slate-100 dark:border-slate-800 pt-6 text-xs text-slate-400 dark:text-slate-500">
+    <div class="border-t border-slate-100 dark:border-slate-800 pt-6 text-xs text-slate-600 dark:text-slate-400">
       <span>
         © {currentYear} EpoxyResin-Calculator.com. {f.allRightsReserved}
       </span>

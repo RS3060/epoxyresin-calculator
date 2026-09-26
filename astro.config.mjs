@@ -13,6 +13,9 @@ export default defineConfig({
       prefixDefaultLocale: false
     }
   },
+  build: {
+    inlineStylesheets: 'always'
+  },
   vite: {
     plugins: [tailwindcss()]
   },

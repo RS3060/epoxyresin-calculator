@@ -111,14 +111,14 @@ const conv = t.converter;
 
       {/* Quick Preset Conversion Pills */}
       <div class="mt-6 pt-5 border-t border-slate-200 dark:border-slate-800 flex flex-wrap items-center justify-between gap-2 text-xs">
-        <div class="flex flex-wrap gap-1.5">
-          <span class="text-slate-400 dark:text-slate-400 font-medium py-1">{conv.quickConversions}</span>
-          <button type="button" class="conv-quick-pill rounded-md bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 px-2.5 py-1 text-slate-700 dark:text-slate-200 hover:border-cyan-600 dark:hover:border-cyan-400 transition-colors" data-amt="1000" data-from="ml" data-to="floz">{conv.quickButtons.lToFloz}</button>
-          <button type="button" class="conv-quick-pill rounded-md bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 px-2.5 py-1 text-slate-700 dark:text-slate-200 hover:border-cyan-600 dark:hover:border-cyan-400 transition-colors" data-amt="1" data-from="gal" data-to="l">{conv.quickButtons.galToL}</button>
-          <button type="button" class="conv-quick-pill rounded-md bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 px-2.5 py-1 text-slate-700 dark:text-slate-200 hover:border-cyan-600 dark:hover:border-cyan-400 transition-colors" data-amt="500" data-from="ml" data-to="g">{conv.quickButtons.mlToG}</button>
-          <button type="button" class="conv-quick-pill rounded-md bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 px-2.5 py-1 text-slate-700 dark:text-slate-200 hover:border-cyan-600 dark:hover:border-cyan-400 transition-colors" data-amt="1" data-from="kg" data-to="ml">{conv.quickButtons.kgToMl}</button>
+        <div class="flex flex-wrap items-center gap-2">
+          <span class="text-slate-600 dark:text-slate-400 font-bold py-1.5">{conv.quickConversions}</span>
+          <button type="button" class="conv-quick-pill rounded-lg bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 px-3 py-1.5 min-h-[36px] text-slate-700 dark:text-slate-200 hover:border-cyan-600 dark:hover:border-cyan-400 transition-colors cursor-pointer" data-amt="1000" data-from="ml" data-to="floz">{conv.quickButtons.lToFloz}</button>
+          <button type="button" class="conv-quick-pill rounded-lg bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 px-3 py-1.5 min-h-[36px] text-slate-700 dark:text-slate-200 hover:border-cyan-600 dark:hover:border-cyan-400 transition-colors cursor-pointer" data-amt="1" data-from="gal" data-to="l">{conv.quickButtons.galToL}</button>
+          <button type="button" class="conv-quick-pill rounded-lg bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 px-3 py-1.5 min-h-[36px] text-slate-700 dark:text-slate-200 hover:border-cyan-600 dark:hover:border-cyan-400 transition-colors cursor-pointer" data-amt="500" data-from="ml" data-to="g">{conv.quickButtons.mlToG}</button>
+          <button type="button" class="conv-quick-pill rounded-lg bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 px-3 py-1.5 min-h-[36px] text-slate-700 dark:text-slate-200 hover:border-cyan-600 dark:hover:border-cyan-400 transition-colors cursor-pointer" data-amt="1" data-from="kg" data-to="ml">{conv.quickButtons.kgToMl}</button>
         </div>
-        <span class="text-[11px] text-slate-400 dark:text-slate-400">{conv.calibratedDensity}</span>
+        <span class="text-[11px] text-slate-600 dark:text-slate-400 font-medium">{conv.calibratedDensity}</span>
       </div>
 
     </div>
@@ -126,7 +126,7 @@ const conv = t.converter;
   </div>
 </section>
 
-<script is:inline>
+<script>
   (function() {
     var ML_PER_FL_OZ = 29.5735295625;
     var ML_PER_GAL = 3785.411784;
