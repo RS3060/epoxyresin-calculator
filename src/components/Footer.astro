@@ -26,7 +26,7 @@ const locales: { code: Locale; label: string; flag: string; path: string }[] = [
 const currentYear = 2026;
 ---
 
-<footer class="border-t border-slate-200 bg-white py-12 text-slate-600">
+<footer class="border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 py-12 text-slate-600 dark:text-slate-400">
   <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
     
     <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-10">
@@ -34,49 +34,49 @@ const currentYear = 2026;
       {/* Column 1: Brand & Tagline */}
       <div class="md:col-span-2 space-y-3">
         <a href={currentLocale === 'en' ? '/' : `/${currentLocale}/`} class="flex items-center gap-2.5">
-          <div class="flex h-8 w-8 items-center justify-center rounded-lg bg-slate-900 text-white shadow-xs">
+          <div class="flex h-8 w-8 items-center justify-center rounded-lg bg-slate-900 dark:bg-slate-800 border border-slate-800 dark:border-slate-700 text-white shadow-xs">
             <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-droplets">
               <path d="M7 16.3c2.2 0 4-1.83 4-4.05 0-1.16-.57-2.26-1.71-3.19S7.29 6.75 7 5.3c-.29 1.45-1.14 2.84-2.29 3.76S3 11.1 3 12.25c0 2.22 1.8 4.05 4 4.05z" stroke="#f59e0b" stroke-width="2" />
               <path d="M12.56 6.6A10.97 10.97 0 0 0 14 3.02c.5 2.5 2 4.9 4 6.5s3 3.5 3 5.5a6.98 6.98 0 0 1-11.91 4.97" stroke="#06b6d4" stroke-width="2" />
             </svg>
           </div>
-          <span class="text-base font-black tracking-tight text-slate-900">
-            epoxyresin<span class="text-cyan-600">-calculator</span>
+          <span class="text-base font-black tracking-tight text-slate-900 dark:text-white">
+            epoxyresin<span class="text-cyan-600 dark:text-cyan-400">-calculator</span>
           </span>
         </a>
-        <p class="text-xs text-slate-500 max-w-md leading-relaxed">
+        <p class="text-xs text-slate-500 dark:text-slate-400 max-w-md leading-relaxed">
           {f.tagline}
         </p>
-        <p class="text-[11px] text-slate-400 max-w-md leading-normal">
+        <p class="text-[11px] text-slate-400 dark:text-slate-500 max-w-md leading-normal">
           {f.legalNote}
         </p>
       </div>
 
       {/* Column 2: Navigation & Quick Links */}
       <div class="space-y-2">
-        <span class="text-xs font-bold uppercase tracking-wider text-slate-900">{f.calculationsTitle}</span>
+        <span class="text-xs font-bold uppercase tracking-wider text-slate-900 dark:text-white">{f.calculationsTitle}</span>
         <ul class="space-y-1.5 text-xs">
-          <li><a href="#calculator" class="hover:text-cyan-600 transition-colors">{t.nav.calculator}</a></li>
-          <li><a href="#coverage" class="hover:text-cyan-600 transition-colors">{t.nav.coverage}</a></li>
-          <li><a href="#reference-table" class="hover:text-cyan-600 transition-colors">{t.nav.referenceTable}</a></li>
-          <li><a href="#guides" class="hover:text-cyan-600 transition-colors">{t.nav.guides}</a></li>
-          <li><a href="#seo-guide" class="hover:text-cyan-600 transition-colors">Resin Calculator Guide</a></li>
-          <li><a href="#faq" class="hover:text-cyan-600 transition-colors">{t.nav.faq}</a></li>
-          <li><a href="#paa" class="hover:text-cyan-600 transition-colors">{t.nav.paa}</a></li>
+          <li><a href="#calculator" class="hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors">{t.nav.calculator}</a></li>
+          <li><a href="#coverage" class="hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors">{t.nav.coverage}</a></li>
+          <li><a href="#reference-table" class="hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors">{t.nav.referenceTable}</a></li>
+          <li><a href="#guides" class="hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors">{t.nav.guides}</a></li>
+          <li><a href="#seo-guide" class="hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors">Resin Calculator Guide</a></li>
+          <li><a href="#faq" class="hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors">{t.nav.faq}</a></li>
+          <li><a href="#paa" class="hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors">{t.nav.paa}</a></li>
         </ul>
       </div>
 
       {/* Column 3: Languages & Legal */}
       <div class="space-y-2">
-        <span class="text-xs font-bold uppercase tracking-wider text-slate-900">{f.languagesTitle}</span>
+        <span class="text-xs font-bold uppercase tracking-wider text-slate-900 dark:text-white">{f.languagesTitle}</span>
         <div class="flex flex-wrap gap-1.5 mb-3">
           {locales.map((loc) => (
             <a 
               href={loc.path} 
               class={`rounded px-2 py-1 text-[11px] font-semibold transition-colors ${
                 loc.code === currentLocale 
-                  ? 'bg-cyan-100 text-cyan-800' 
-                  : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
+                  ? 'bg-cyan-100 text-cyan-800 dark:bg-cyan-950 dark:text-cyan-300 dark:border dark:border-cyan-800' 
+                  : 'bg-slate-100 dark:bg-slate-900 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-800 border border-transparent dark:border-slate-800'
               }`}
             >
               {loc.flag} {loc.label}
@@ -84,17 +84,17 @@ const currentYear = 2026;
           ))}
         </div>
         <ul class="space-y-1.5 text-xs">
-          <li><a href="/about" class="hover:text-cyan-600 transition-colors">{f.aboutUs}</a></li>
-          <li><a href="/contact" class="hover:text-cyan-600 transition-colors">{f.contactUs}</a></li>
-          <li><a href="/privacy-policy" class="hover:text-cyan-600 transition-colors">{f.privacy}</a></li>
-          <li><a href="/terms" class="hover:text-cyan-600 transition-colors">{f.terms}</a></li>
+          <li><a href="/about" class="hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors">{f.aboutUs}</a></li>
+          <li><a href="/contact" class="hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors">{f.contactUs}</a></li>
+          <li><a href="/privacy-policy" class="hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors">{f.privacy}</a></li>
+          <li><a href="/terms" class="hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors">{f.terms}</a></li>
         </ul>
       </div>
 
     </div>
 
     {/* Bottom Bar */}
-    <div class="border-t border-slate-100 pt-6 text-xs text-slate-400">
+    <div class="border-t border-slate-100 dark:border-slate-800 pt-6 text-xs text-slate-400 dark:text-slate-500">
       <span>
         © {currentYear} EpoxyResin-Calculator.com. {f.allRightsReserved}
       </span>

@@ -8,26 +8,26 @@ import Layout from '../layouts/Layout.astro';
   customDescription="Terms & conditions and technical data sheet (TDS) verification disclaimer for EpoxyResin-Calculator.com."
   showLanguageSelector={false}
 >
-  <div class="py-16 bg-white">
+  <div class="py-16 bg-white dark:bg-slate-950 transition-colors duration-200">
     <div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
       
-      <div class="mb-10 border-b border-slate-200 pb-6">
-        <a href="/" class="inline-flex items-center gap-1.5 text-xs font-bold text-cyan-700 hover:text-cyan-800 mb-4">
+      <div class="mb-10 border-b border-slate-200 dark:border-slate-800 pb-6">
+        <a href="/" class="inline-flex items-center gap-1.5 text-xs font-bold text-cyan-700 dark:text-cyan-400 hover:text-cyan-800 dark:hover:text-cyan-300 mb-4 transition-colors">
           ← Back to Calculator
         </a>
-        <h1 class="text-3xl font-black tracking-tight text-slate-900 sm:text-4xl">
+        <h1 class="text-3xl font-black tracking-tight text-slate-900 dark:text-white sm:text-4xl">
           Terms & Conditions
         </h1>
-        <p class="text-xs text-slate-500 mt-2">
+        <p class="text-xs text-slate-500 dark:text-slate-400 mt-2">
           Effective Date: January 1, 2026 • Last Updated: September 2026
         </p>
       </div>
 
-      <div class="prose prose-slate text-sm leading-relaxed space-y-6 text-slate-700">
+      <div class="prose prose-slate dark:prose-invert text-sm leading-relaxed space-y-6 text-slate-700 dark:text-slate-300">
         
-        <section class="rounded-xl border border-amber-300 bg-amber-50/70 p-4 text-amber-900">
-          <h2 class="text-sm font-bold uppercase tracking-wider text-amber-950 mb-1 flex items-center gap-2">
-            <svg class="h-4 w-4 text-amber-700 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <section class="rounded-xl border border-amber-300 dark:border-amber-800/80 bg-amber-50/70 dark:bg-amber-950/40 p-4 text-amber-900 dark:text-amber-200">
+          <h2 class="text-sm font-bold uppercase tracking-wider text-amber-950 dark:text-amber-300 mb-1 flex items-center gap-2">
+            <svg class="h-4 w-4 text-amber-700 dark:text-amber-400 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/>
               <line x1="12" y1="9" x2="12" y2="13"/>
               <line x1="12" y1="17" x2="12.01" y2="17"/>
@@ -40,18 +40,18 @@ import Layout from '../layouts/Layout.astro';
         </section>
 
         <section>
-          <h2 class="text-lg font-bold text-slate-900 mb-2">1. Nature of the Service</h2>
+          <h2 class="text-lg font-bold text-slate-900 dark:text-white mb-2">1. Nature of the Service</h2>
           <p>
             EpoxyResin-Calculator.com provides mathematical modeling tools to estimate volumetric displacement and theoretical component mass splits based on standard Euclidean geometry and typical polyamine/epoxide densities. The calculator is provided free of charge for informational, educational, and preliminary planning purposes only.
           </p>
         </section>
 
         <section>
-          <h2 class="text-lg font-bold text-slate-900 mb-2">2. Accuracy and Material Variations</h2>
+          <h2 class="text-lg font-bold text-slate-900 dark:text-white mb-2">2. Accuracy and Material Variations</h2>
           <p>
             While our mathematical calculations are engineered to institutional standards, actual resin consumption may vary due to physical factors beyond algorithmic modeling, including:
           </p>
-          <ul class="list-disc pl-5 mt-2 space-y-1 text-slate-600">
+          <ul class="list-disc pl-5 mt-2 space-y-1 text-slate-600 dark:text-slate-300">
             <li>Timber porosity and deep grain capillary absorption;</li>
             <li>Thermal expansion or contraction during exothermic reactions;</li>
             <li>Mold deformation, flexing, or unlevel workshop surfaces;</li>
@@ -61,14 +61,14 @@ import Layout from '../layouts/Layout.astro';
         </section>
 
         <section>
-          <h2 class="text-lg font-bold text-slate-900 mb-2">3. Exothermic Reaction Warning</h2>
+          <h2 class="text-lg font-bold text-slate-900 dark:text-white mb-2">3. Exothermic Reaction Warning</h2>
           <p>
             Epoxy curing is an exothermic process. Pouring resin deeper than the manufacturer's specified maximum pour depth can result in catastrophic thermal runaway, boiling, excessive fumes, smoking, cracking, or fire hazards. The user assumes full responsibility for workspace temperature control, ventilation, PPE (personal protective equipment), and layer thickness management.
           </p>
         </section>
 
         <section>
-          <h2 class="text-lg font-bold text-slate-900 mb-2">4. Limitation of Liability</h2>
+          <h2 class="text-lg font-bold text-slate-900 dark:text-white mb-2">4. Limitation of Liability</h2>
           <p>
             In no event shall the creators, maintainers, or hosting providers of EpoxyResin-Calculator.com be liable for any direct, indirect, incidental, special, or consequential damages, including loss of materials, ruined woodwork, project delays, or workshop damages arising from the use of or inability to use this calculation tool.
           </p>

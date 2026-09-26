@@ -11,16 +11,16 @@ const t = translations[currentLocale] || translations.en;
 const g = t.guides;
 ---
 
-<section id="guides" class="py-16 bg-white border-t border-slate-200/80">
+<section id="guides" class="py-16 bg-white dark:bg-slate-950 border-t border-slate-200/80 dark:border-slate-800">
   <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
     
     {/* Section Header */}
     <div class="mx-auto max-w-3xl text-center mb-12">
-      <span class="text-xs font-bold uppercase tracking-wider text-cyan-700">{g.eyebrow}</span>
-      <h2 class="text-3xl font-black tracking-tight text-slate-900 sm:text-4xl mt-1">
+      <span class="text-xs font-bold uppercase tracking-wider text-cyan-700 dark:text-cyan-400">{g.eyebrow}</span>
+      <h2 class="text-3xl font-black tracking-tight text-slate-900 dark:text-white sm:text-4xl mt-1">
         {g.title}
       </h2>
-      <p class="text-base text-slate-600 mt-3">
+      <p class="text-base text-slate-600 dark:text-slate-300 mt-3">
         {g.subtitle}
       </p>
     </div>
@@ -29,22 +29,22 @@ const g = t.guides;
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
       
       {/* Guide 1: How to Calculate Epoxy Resin Volume */}
-      <article class="flex flex-col justify-between rounded-2xl border border-slate-200 bg-slate-50/50 p-6 sm:p-7 shadow-xs hover:border-slate-300 transition-all">
+      <article class="flex flex-col justify-between rounded-2xl border border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-900/80 p-6 sm:p-7 shadow-xs hover:border-slate-300 dark:hover:border-slate-700 transition-all">
         <div>
           <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-cyan-600 text-white shadow-md shadow-cyan-600/20 mb-5">
             <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
           </div>
-          <h3 class="text-xl font-bold text-slate-900 mb-3">
+          <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">
             {g.guide1.title}
           </h3>
-          <div class="space-y-3 text-sm text-slate-600 leading-relaxed">
+          <div class="space-y-3 text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
             {g.guide1.content.map((p) => (
               <p>{p}</p>
             ))}
           </div>
         </div>
-        <div class="mt-6 border-t border-slate-200/80 pt-4">
-          <span class="inline-flex items-center gap-1.5 text-xs font-bold text-cyan-700">
+        <div class="mt-6 border-t border-slate-200/80 dark:border-slate-800 pt-4">
+          <span class="inline-flex items-center gap-1.5 text-xs font-bold text-cyan-700 dark:text-cyan-400">
             <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
             {g.card1Badge}
           </span>
@@ -52,22 +52,22 @@ const g = t.guides;
       </article>
 
       {/* Guide 2: Volume vs. Weight Ratio */}
-      <article class="flex flex-col justify-between rounded-2xl border border-slate-200 bg-slate-50/50 p-6 sm:p-7 shadow-xs hover:border-slate-300 transition-all">
+      <article class="flex flex-col justify-between rounded-2xl border border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-900/80 p-6 sm:p-7 shadow-xs hover:border-slate-300 dark:hover:border-slate-700 transition-all">
         <div>
           <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-amber-600 text-white shadow-md shadow-amber-600/20 mb-5">
             <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
           </div>
-          <h3 class="text-xl font-bold text-slate-900 mb-3">
+          <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">
             {g.guide2.title}
           </h3>
-          <div class="space-y-3 text-sm text-slate-600 leading-relaxed">
+          <div class="space-y-3 text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
             {g.guide2.content.map((p) => (
               <p>{p}</p>
             ))}
           </div>
         </div>
-        <div class="mt-6 border-t border-slate-200/80 pt-4">
-          <span class="inline-flex items-center gap-1.5 text-xs font-bold text-amber-700">
+        <div class="mt-6 border-t border-slate-200/80 dark:border-slate-800 pt-4">
+          <span class="inline-flex items-center gap-1.5 text-xs font-bold text-amber-700 dark:text-amber-400">
             <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
             {g.card2Badge}
           </span>
@@ -75,22 +75,22 @@ const g = t.guides;
       </article>
 
       {/* Guide 3: Deep Pour vs Table Top */}
-      <article class="flex flex-col justify-between rounded-2xl border border-slate-200 bg-slate-50/50 p-6 sm:p-7 shadow-xs hover:border-slate-300 transition-all">
+      <article class="flex flex-col justify-between rounded-2xl border border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-900/80 p-6 sm:p-7 shadow-xs hover:border-slate-300 dark:hover:border-slate-700 transition-all">
         <div>
-          <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-slate-900 text-white shadow-md shadow-slate-900/20 mb-5">
+          <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-slate-900 dark:bg-slate-800 dark:border dark:border-slate-700 text-white shadow-md shadow-slate-900/20 mb-5">
             <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
           </div>
-          <h3 class="text-xl font-bold text-slate-900 mb-3">
+          <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">
             {g.guide3.title}
           </h3>
-          <div class="space-y-3 text-sm text-slate-600 leading-relaxed">
+          <div class="space-y-3 text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
             {g.guide3.content.map((p) => (
               <p>{p}</p>
             ))}
           </div>
         </div>
-        <div class="mt-6 border-t border-slate-200/80 pt-4">
-          <span class="inline-flex items-center gap-1.5 text-xs font-bold text-slate-900">
+        <div class="mt-6 border-t border-slate-200/80 dark:border-slate-800 pt-4">
+          <span class="inline-flex items-center gap-1.5 text-xs font-bold text-slate-900 dark:text-slate-200">
             <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
             {g.card3Badge}
           </span>

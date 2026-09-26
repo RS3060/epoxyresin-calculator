@@ -190,13 +190,28 @@ const ogLocales: Record<Locale, string> = {
     <link rel="alternate" hreflang="bg" href={`${siteUrl}/bg/`} />
     <link rel="alternate" hreflang="x-default" href={`${siteUrl}/`} />
 
+    {/* Immediate Anti-FOUC Theme Script */}
+    <script is:inline>
+      (function() {
+        try {
+          var stored = localStorage.getItem('theme');
+          var isDark = stored === 'dark' || (!stored && window.matchMedia('(prefers-color-scheme: dark)').matches);
+          if (isDark) {
+            document.documentElement.classList.add('dark');
+          } else {
+            document.documentElement.classList.remove('dark');
+          }
+        } catch (_) {}
+      })();
+    </script>
+
     {/* JSON-LD Structured Data Schemas */}
     <script type="application/ld+json" set:html={JSON.stringify(webAppSchema)} />
     <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
     <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
     <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
   </head>
-  <body class="min-h-screen bg-[#f8fafc] text-slate-900 flex flex-col font-sans">
+  <body class="min-h-screen bg-[#f8fafc] dark:bg-slate-950 text-slate-900 dark:text-slate-100 flex flex-col font-sans transition-colors duration-200">
     <Header currentLocale={locale} showLanguageSelector={showLanguageSelector} />
     <main class="flex-1 workshop-grid">
       <slot />

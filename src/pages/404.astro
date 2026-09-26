@@ -9,25 +9,25 @@ import Layout from '../layouts/Layout.astro';
   showLanguageSelector={false}
   noindex={true}
 >
-  <div class="py-16 sm:py-24 bg-white flex items-center justify-center">
+  <div class="py-16 sm:py-24 bg-white dark:bg-slate-950 flex items-center justify-center transition-colors duration-200">
     <div class="mx-auto max-w-2xl px-4 sm:px-6 lg:px-8 text-center">
       
       {/* Status Badge */}
-      <div class="inline-flex items-center gap-2 rounded-full bg-cyan-50 border border-cyan-200/80 px-3.5 py-1 text-xs font-bold text-cyan-800 mb-6">
-        <span class="h-2 w-2 rounded-full bg-cyan-600"></span>
+      <div class="inline-flex items-center gap-2 rounded-full bg-cyan-50 dark:bg-cyan-950/80 border border-cyan-200/80 dark:border-cyan-800 px-3.5 py-1 text-xs font-bold text-cyan-800 dark:text-cyan-300 mb-6">
+        <span class="h-2 w-2 rounded-full bg-cyan-600 dark:bg-cyan-400"></span>
         404 • Missing Specification
       </div>
 
       {/* Large Code */}
-      <h1 class="text-7xl sm:text-9xl font-black tracking-tighter bg-gradient-to-br from-slate-900 via-cyan-900 to-slate-700 bg-clip-text text-transparent select-none mb-2">
+      <h1 class="text-7xl sm:text-9xl font-black tracking-tighter bg-gradient-to-br from-slate-900 via-cyan-900 to-slate-700 dark:from-white dark:via-cyan-300 dark:to-slate-400 bg-clip-text text-transparent select-none mb-2">
         404
       </h1>
 
       {/* Headline & Description */}
-      <h2 class="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight mb-4">
+      <h2 class="text-2xl sm:text-3xl font-black text-slate-900 dark:text-white tracking-tight mb-4">
         Calculation Coordinates Not Found
       </h2>
-      <p class="text-sm sm:text-base text-slate-600 leading-relaxed max-w-lg mx-auto mb-8">
+      <p class="text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed max-w-lg mx-auto mb-8">
         The page or recipe you are looking for doesn't exist, has been relocated, or evaporated during exothermic cure. Let's get your project back on ratio.
       </p>
 
@@ -44,38 +44,38 @@ import Layout from '../layouts/Layout.astro';
         </a>
         <a 
           href="/#coverage" 
-          class="inline-flex items-center justify-center gap-2 rounded-xl border border-slate-200 bg-slate-50 px-6 py-3 text-xs sm:text-sm font-bold text-slate-700 hover:bg-slate-100 hover:border-slate-300 transition-all"
+          class="inline-flex items-center justify-center gap-2 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 px-6 py-3 text-xs sm:text-sm font-bold text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-700 hover:border-slate-300 dark:hover:border-slate-600 transition-all"
         >
           Surface Coverage Tool
         </a>
       </div>
 
       {/* Quick Links Card */}
-      <div class="rounded-2xl border border-slate-200/80 bg-slate-50/70 p-6 text-left">
-        <p class="text-xs font-bold uppercase tracking-wider text-slate-500 mb-3">
+      <div class="rounded-2xl border border-slate-200/80 dark:border-slate-800 bg-slate-50/70 dark:bg-slate-900 p-6 text-left">
+        <p class="text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-3">
           Popular Calculations & Resources
         </p>
         <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
           <a 
             href="/#calculator" 
-            class="group rounded-xl border border-slate-200 bg-white p-3 hover:border-cyan-300 hover:shadow-xs transition-all"
+            class="group rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-800/80 p-3 hover:border-cyan-300 dark:hover:border-cyan-500 hover:shadow-xs transition-all"
           >
-            <div class="text-xs font-bold text-slate-900 group-hover:text-cyan-700 transition-colors">Volume Engine</div>
-            <div class="text-[11px] text-slate-500 mt-0.5">Rectangle, circle, oval & river</div>
+            <div class="text-xs font-bold text-slate-900 dark:text-white group-hover:text-cyan-700 dark:group-hover:text-cyan-400 transition-colors">Volume Engine</div>
+            <div class="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5">Rectangle, circle, oval & river</div>
           </a>
           <a 
             href="/#reference-table" 
-            class="group rounded-xl border border-slate-200 bg-white p-3 hover:border-cyan-300 hover:shadow-xs transition-all"
+            class="group rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-800/80 p-3 hover:border-cyan-300 dark:hover:border-cyan-500 hover:shadow-xs transition-all"
           >
-            <div class="text-xs font-bold text-slate-900 group-hover:text-cyan-700 transition-colors">Ratio Reference</div>
-            <div class="text-[11px] text-slate-500 mt-0.5">1:1, 2:1, 3:1 weight splits</div>
+            <div class="text-xs font-bold text-slate-900 dark:text-white group-hover:text-cyan-700 dark:group-hover:text-cyan-400 transition-colors">Ratio Reference</div>
+            <div class="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5">1:1, 2:1, 3:1 weight splits</div>
           </a>
           <a 
             href="/contact" 
-            class="group rounded-xl border border-slate-200 bg-white p-3 hover:border-cyan-300 hover:shadow-xs transition-all"
+            class="group rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-800/80 p-3 hover:border-cyan-300 dark:hover:border-cyan-500 hover:shadow-xs transition-all"
           >
-            <div class="text-xs font-bold text-slate-900 group-hover:text-cyan-700 transition-colors">Engineering Support</div>
-            <div class="text-[11px] text-slate-500 mt-0.5">Questions & suggestions</div>
+            <div class="text-xs font-bold text-slate-900 dark:text-white group-hover:text-cyan-700 dark:group-hover:text-cyan-400 transition-colors">Engineering Support</div>
+            <div class="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5">Questions & suggestions</div>
           </a>
         </div>
       </div>

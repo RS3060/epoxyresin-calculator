@@ -11,26 +11,26 @@ const t = translations[currentLocale] || translations.en;
 const paa = t.paa || translations.en.paa;
 ---
 
-<section id="paa" class="py-16 bg-white border-t border-slate-200/80">
+<section id="paa" class="py-16 bg-white dark:bg-slate-950 border-t border-slate-200/80 dark:border-slate-800">
   <div class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
     
     <div class="text-center mb-12">
-      <span class="text-xs font-bold uppercase tracking-wider text-cyan-700">{paa.tag}</span>
-      <h2 class="text-3xl font-black tracking-tight text-slate-900 sm:text-4xl mt-1">
+      <span class="text-xs font-bold uppercase tracking-wider text-cyan-700 dark:text-cyan-400">{paa.tag}</span>
+      <h2 class="text-3xl font-black tracking-tight text-slate-900 dark:text-white sm:text-4xl mt-1">
         {paa.title}
       </h2>
-      <p class="text-base text-slate-600 mt-3 max-w-2xl mx-auto">
+      <p class="text-base text-slate-600 dark:text-slate-300 mt-3 max-w-2xl mx-auto">
         {paa.subtitle}
       </p>
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
       {paa.items.map((item) => (
-        <div class="rounded-2xl border border-slate-200 bg-slate-50/40 p-6 shadow-xs">
-          <h3 class="text-lg font-bold text-slate-900 mb-2">
+        <div class="rounded-2xl border border-slate-200 dark:border-slate-800 bg-slate-50/40 dark:bg-slate-900 p-6 shadow-xs">
+          <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">
             {item.q}
           </h3>
-          <p class="text-sm text-slate-600 leading-relaxed">
+          <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
             {item.a}
           </p>
         </div>

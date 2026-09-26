@@ -8,17 +8,17 @@ import Layout from '../layouts/Layout.astro';
   customDescription="Contact the engineering and workshop modeling team at EpoxyResin-Calculator.com for inquiries, ratio suggestions, or bug reports."
   showLanguageSelector={false}
 >
-  <div class="py-16 bg-[#f8fafc]">
+  <div class="py-16 bg-[#f8fafc] dark:bg-slate-950 transition-colors duration-200">
     <div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
       
-      <div class="mb-10 border-b border-slate-200 pb-6">
-        <a href="/" class="inline-flex items-center gap-1.5 text-xs font-bold text-cyan-700 hover:text-cyan-800 mb-4 transition-colors">
+      <div class="mb-10 border-b border-slate-200 dark:border-slate-800 pb-6">
+        <a href="/" class="inline-flex items-center gap-1.5 text-xs font-bold text-cyan-700 dark:text-cyan-400 hover:text-cyan-800 dark:hover:text-cyan-300 mb-4 transition-colors">
           ← Back to Calculator
         </a>
-        <h1 class="text-3xl font-black tracking-tight text-slate-900 sm:text-4xl">
+        <h1 class="text-3xl font-black tracking-tight text-slate-900 dark:text-white sm:text-4xl">
           Contact Us
         </h1>
-        <p class="text-sm text-slate-600 mt-2">
+        <p class="text-sm text-slate-600 dark:text-slate-300 mt-2">
           Have a question, formula suggestion, or custom resin density to add? We'd love to hear from you.
         </p>
       </div>
@@ -27,34 +27,34 @@ import Layout from '../layouts/Layout.astro';
         
         <!-- Contact Information / Support Card -->
         <div class="md:col-span-1 space-y-6">
-          <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-xs">
-            <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-cyan-50 text-cyan-700 mb-4">
+          <div class="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-6 shadow-xs">
+            <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-cyan-50 dark:bg-cyan-950/80 text-cyan-700 dark:text-cyan-400 border border-transparent dark:border-cyan-800/60 mb-4">
               <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <rect width="20" height="16" x="2" y="4" rx="2"/>
                 <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
               </svg>
             </div>
-            <h2 class="text-sm font-bold text-slate-900">Direct Email</h2>
-            <p class="mt-1 text-xs text-slate-500">
+            <h2 class="text-sm font-bold text-slate-900 dark:text-white">Direct Email</h2>
+            <p class="mt-1 text-xs text-slate-500 dark:text-slate-400">
               For general questions or partnership inquiries:
             </p>
             <a 
               href="mailto:support@epoxyresin-calculator.com" 
-              class="mt-2 block text-xs font-bold text-cyan-700 hover:underline break-all"
+              class="mt-2 block text-xs font-bold text-cyan-700 dark:text-cyan-400 hover:underline break-all"
             >
               support@epoxyresin-calculator.com
             </a>
           </div>
 
-          <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-xs">
-            <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-slate-100 text-slate-700 mb-4">
+          <div class="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-6 shadow-xs">
+            <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-transparent dark:border-slate-700 mb-4">
               <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <circle cx="12" cy="12" r="10"/>
                 <polyline points="12 6 12 12 16 14"/>
               </svg>
             </div>
-            <h2 class="text-sm font-bold text-slate-900">Response Window</h2>
-            <p class="mt-1 text-xs text-slate-500">
+            <h2 class="text-sm font-bold text-slate-900 dark:text-white">Response Window</h2>
+            <p class="mt-1 text-xs text-slate-500 dark:text-slate-400">
               Our maker team typically reviews and replies to workshop inquiries within 24–48 business hours.
             </p>
           </div>
@@ -62,12 +62,12 @@ import Layout from '../layouts/Layout.astro';
 
         <!-- Interactive Contact Form -->
         <div class="md:col-span-2">
-          <div class="rounded-2xl border border-slate-200 bg-white p-6 sm:p-8 shadow-xs">
-            <h2 class="text-lg font-bold text-slate-900 mb-4">Send a Message</h2>
+          <div class="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-6 sm:p-8 shadow-xs">
+            <h2 class="text-lg font-bold text-slate-900 dark:text-white mb-4">Send a Message</h2>
             
             <form id="contact-form" class="space-y-4">
               <div>
-                <label for="contact-name" class="block text-xs font-bold text-slate-700 mb-1">
+                <label for="contact-name" class="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">
                   Your Name
                 </label>
                 <input 
@@ -76,12 +76,12 @@ import Layout from '../layouts/Layout.astro';
                   name="name" 
                   required
                   placeholder="e.g. Alex Morgan"
-                  class="w-full rounded-xl border border-slate-200 bg-slate-50/50 px-3.5 py-2.5 text-xs text-slate-800 placeholder-slate-400 focus:border-cyan-600 focus:bg-white focus:outline-none focus:ring-2 focus:ring-cyan-600/20"
+                  class="w-full rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50/50 dark:bg-slate-800/80 px-3.5 py-2.5 text-xs text-slate-800 dark:text-white placeholder-slate-400 dark:placeholder-slate-500 focus:border-cyan-600 dark:focus:border-cyan-400 focus:bg-white dark:focus:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-cyan-600/20"
                 />
               </div>
 
               <div>
-                <label for="contact-email" class="block text-xs font-bold text-slate-700 mb-1">
+                <label for="contact-email" class="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">
                   Email Address
                 </label>
                 <input 
@@ -90,28 +90,28 @@ import Layout from '../layouts/Layout.astro';
                   name="email" 
                   required
                   placeholder="alex@example.com"
-                  class="w-full rounded-xl border border-slate-200 bg-slate-50/50 px-3.5 py-2.5 text-xs text-slate-800 placeholder-slate-400 focus:border-cyan-600 focus:bg-white focus:outline-none focus:ring-2 focus:ring-cyan-600/20"
+                  class="w-full rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50/50 dark:bg-slate-800/80 px-3.5 py-2.5 text-xs text-slate-800 dark:text-white placeholder-slate-400 dark:placeholder-slate-500 focus:border-cyan-600 dark:focus:border-cyan-400 focus:bg-white dark:focus:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-cyan-600/20"
                 />
               </div>
 
               <div>
-                <label for="contact-subject" class="block text-xs font-bold text-slate-700 mb-1">
+                <label for="contact-subject" class="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">
                   Topic / Subject
                 </label>
                 <select 
                   id="contact-subject" 
                   name="subject"
-                  class="w-full rounded-xl border border-slate-200 bg-slate-50/50 px-3.5 py-2.5 text-xs text-slate-800 focus:border-cyan-600 focus:bg-white focus:outline-none focus:ring-2 focus:ring-cyan-600/20"
+                  class="w-full rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50/50 dark:bg-slate-800 px-3.5 py-2.5 text-xs text-slate-800 dark:text-white focus:border-cyan-600 dark:focus:border-cyan-400 focus:bg-white dark:focus:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-cyan-600/20"
                 >
-                  <option value="general">General Feedback / Inquiry</option>
-                  <option value="feature">Calculation Formula or Ratio Suggestion</option>
-                  <option value="bug">Bug Report / Technical Issue</option>
-                  <option value="translation">Language or Translation Improvement</option>
+                  <option value="general" class="bg-white dark:bg-slate-850">General Feedback / Inquiry</option>
+                  <option value="feature" class="bg-white dark:bg-slate-850">Calculation Formula or Ratio Suggestion</option>
+                  <option value="bug" class="bg-white dark:bg-slate-850">Bug Report / Technical Issue</option>
+                  <option value="translation" class="bg-white dark:bg-slate-850">Language or Translation Improvement</option>
                 </select>
               </div>
 
               <div>
-                <label for="contact-message" class="block text-xs font-bold text-slate-700 mb-1">
+                <label for="contact-message" class="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1">
                   Message
                 </label>
                 <textarea 
@@ -120,14 +120,14 @@ import Layout from '../layouts/Layout.astro';
                   rows="4" 
                   required
                   placeholder="Describe your question, project specifications, or feedback in detail..."
-                  class="w-full rounded-xl border border-slate-200 bg-slate-50/50 px-3.5 py-2.5 text-xs text-slate-800 placeholder-slate-400 focus:border-cyan-600 focus:bg-white focus:outline-none focus:ring-2 focus:ring-cyan-600/20"
+                  class="w-full rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50/50 dark:bg-slate-800/80 px-3.5 py-2.5 text-xs text-slate-800 dark:text-white placeholder-slate-400 dark:placeholder-slate-500 focus:border-cyan-600 dark:focus:border-cyan-400 focus:bg-white dark:focus:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-cyan-600/20"
                 ></textarea>
               </div>
 
               <button 
                 type="submit" 
                 id="contact-submit-btn"
-                class="w-full flex items-center justify-center gap-2 rounded-xl bg-slate-900 py-3 text-xs font-bold text-white shadow-sm hover:bg-slate-800 active:scale-[0.99] transition-all cursor-pointer"
+                class="w-full flex items-center justify-center gap-2 rounded-xl bg-slate-900 dark:bg-cyan-600 dark:hover:bg-cyan-500 py-3 text-xs font-bold text-white shadow-sm hover:bg-slate-800 active:scale-[0.99] transition-all cursor-pointer"
               >
                 <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <line x1="22" y1="2" x2="11" y2="13"/>
@@ -136,7 +136,7 @@ import Layout from '../layouts/Layout.astro';
                 <span>Send Message</span>
               </button>
 
-              <div id="contact-success" class="hidden rounded-xl border border-emerald-200 bg-emerald-50 p-4 text-center text-xs font-semibold text-emerald-800">
+              <div id="contact-success" class="hidden rounded-xl border border-emerald-200 dark:border-emerald-800 bg-emerald-50 dark:bg-emerald-950/60 p-4 text-center text-xs font-semibold text-emerald-800 dark:text-emerald-300">
                 ✓ Thank you! Your message has been sent. We'll be in touch soon.
               </div>
             </form>

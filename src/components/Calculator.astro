@@ -16,18 +16,18 @@ const c = t.calculator;
     
     {/* Hero / Headline Section */}
     <div class="mx-auto max-w-3xl text-center mb-8 md:mb-12">
-      <h1 class="text-3xl font-black tracking-tight text-slate-900 sm:text-4xl md:text-5xl lg:text-5xl">
+      <h1 class="text-3xl font-black tracking-tight text-slate-900 dark:text-white sm:text-4xl md:text-5xl lg:text-5xl">
         {t.hero.title}
       </h1>
-      <p class="mt-4 text-base text-slate-600 sm:text-lg leading-relaxed">
+      <p class="mt-4 text-base text-slate-600 dark:text-slate-300 sm:text-lg leading-relaxed">
         {t.hero.subtitle}
       </p>
     </div>
 
     {/* Quick Template Presets Bar */}
     <div class="mx-auto max-w-5xl mb-8">
-      <div class="flex items-center justify-between gap-3 border-b border-slate-200 pb-3">
-        <div class="flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-slate-500">
+      <div class="flex items-center justify-between gap-3 border-b border-slate-200 dark:border-slate-800 pb-3">
+        <div class="flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">
           <svg class="h-3.5 w-3.5 text-amber-500 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" fill="currentColor" fill-opacity="0.2"/>
           </svg>
@@ -36,7 +36,7 @@ const c = t.calculator;
         <button 
           type="button" 
           id="clear-calc-btn" 
-          class="inline-flex items-center gap-1.5 text-xs font-semibold text-slate-500 hover:text-cyan-700 transition-colors cursor-pointer"
+          class="inline-flex items-center gap-1.5 text-xs font-semibold text-slate-500 hover:text-cyan-700 dark:text-slate-400 dark:hover:text-cyan-400 transition-colors cursor-pointer"
           title={c.clearBtn}
         >
           <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></svg>
@@ -47,10 +47,10 @@ const c = t.calculator;
         <button 
           type="button" 
           id="preset-coaster"
-          class="group preset-btn flex items-center justify-center gap-2 rounded-lg border border-slate-200 bg-white px-3 py-2 text-xs font-semibold text-slate-700 shadow-xs hover:border-cyan-600 hover:text-cyan-700 hover:bg-cyan-50/50 transition-all focus-visible:outline-2 focus-visible:outline-cyan-600 cursor-pointer"
+          class="group preset-btn flex items-center justify-center gap-2 rounded-lg border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 px-3 py-2 text-xs font-semibold text-slate-700 dark:text-slate-200 shadow-xs hover:border-cyan-600 dark:hover:border-cyan-500 hover:text-cyan-700 dark:hover:text-cyan-400 hover:bg-cyan-50/50 dark:hover:bg-cyan-950/40 transition-all focus-visible:outline-2 focus-visible:outline-cyan-600 cursor-pointer"
           data-shape="rectangle" data-length="10" data-width="10" data-depth="0.5" data-unit="cm" data-ratio="1:1"
         >
-          <svg class="h-3.5 w-3.5 text-slate-400 group-hover:text-cyan-600 shrink-0 transition-colors" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <svg class="h-3.5 w-3.5 text-slate-400 group-hover:text-cyan-600 dark:group-hover:text-cyan-400 shrink-0 transition-colors" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <rect x="3" y="3" width="18" height="18" rx="3"/>
             <circle cx="12" cy="12" r="4"/>
           </svg>
@@ -59,10 +59,10 @@ const c = t.calculator;
         <button 
           type="button" 
           id="preset-tray"
-          class="group preset-btn flex items-center justify-center gap-2 rounded-lg border border-slate-200 bg-white px-3 py-2 text-xs font-semibold text-slate-700 shadow-xs hover:border-cyan-600 hover:text-cyan-700 hover:bg-cyan-50/50 transition-all focus-visible:outline-2 focus-visible:outline-cyan-600 cursor-pointer"
+          class="group preset-btn flex items-center justify-center gap-2 rounded-lg border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 px-3 py-2 text-xs font-semibold text-slate-700 dark:text-slate-200 shadow-xs hover:border-cyan-600 dark:hover:border-cyan-500 hover:text-cyan-700 dark:hover:text-cyan-400 hover:bg-cyan-50/50 dark:hover:bg-cyan-950/40 transition-all focus-visible:outline-2 focus-visible:outline-cyan-600 cursor-pointer"
           data-shape="rectangle" data-length="30" data-width="30" data-depth="1" data-unit="cm" data-ratio="2:1"
         >
-          <svg class="h-3.5 w-3.5 text-slate-400 group-hover:text-cyan-600 shrink-0 transition-colors" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <svg class="h-3.5 w-3.5 text-slate-400 group-hover:text-cyan-600 dark:group-hover:text-cyan-400 shrink-0 transition-colors" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <rect width="20" height="14" x="2" y="5" rx="2"/>
             <line x1="6" y1="12" x2="8" y2="12"/>
             <line x1="16" y1="12" x2="18" y2="12"/>
@@ -72,10 +72,10 @@ const c = t.calculator;
         <button 
           type="button" 
           id="preset-round-table"
-          class="group preset-btn flex items-center justify-center gap-2 rounded-lg border border-slate-200 bg-white px-3 py-2 text-xs font-semibold text-slate-700 shadow-xs hover:border-cyan-600 hover:text-cyan-700 hover:bg-cyan-50/50 transition-all focus-visible:outline-2 focus-visible:outline-cyan-600 cursor-pointer"
+          class="group preset-btn flex items-center justify-center gap-2 rounded-lg border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 px-3 py-2 text-xs font-semibold text-slate-700 dark:text-slate-200 shadow-xs hover:border-cyan-600 dark:hover:border-cyan-500 hover:text-cyan-700 dark:hover:text-cyan-400 hover:bg-cyan-50/50 dark:hover:bg-cyan-950/40 transition-all focus-visible:outline-2 focus-visible:outline-cyan-600 cursor-pointer"
           data-shape="circle" data-diameter="60" data-depth="0.6" data-unit="cm" data-ratio="1:1"
         >
-          <svg class="h-3.5 w-3.5 text-slate-400 group-hover:text-cyan-600 shrink-0 transition-colors" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <svg class="h-3.5 w-3.5 text-slate-400 group-hover:text-cyan-600 dark:group-hover:text-cyan-400 shrink-0 transition-colors" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <circle cx="12" cy="12" r="9"/>
             <circle cx="12" cy="12" r="3.5"/>
           </svg>
@@ -84,10 +84,10 @@ const c = t.calculator;
         <button 
           type="button" 
           id="preset-river-table"
-          class="group preset-btn flex items-center justify-center gap-2 rounded-lg border border-slate-200 bg-white px-3 py-2 text-xs font-semibold text-slate-700 shadow-xs hover:border-cyan-600 hover:text-cyan-700 hover:bg-cyan-50/50 transition-all focus-visible:outline-2 focus-visible:outline-cyan-600 cursor-pointer"
+          class="group preset-btn flex items-center justify-center gap-2 rounded-lg border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 px-3 py-2 text-xs font-semibold text-slate-700 dark:text-slate-200 shadow-xs hover:border-cyan-600 dark:hover:border-cyan-500 hover:text-cyan-700 dark:hover:text-cyan-400 hover:bg-cyan-50/50 dark:hover:bg-cyan-950/40 transition-all focus-visible:outline-2 focus-visible:outline-cyan-600 cursor-pointer"
           data-shape="river-table" data-length="120" data-voidwidth="20" data-depth="5" data-unit="cm" data-ratio="2:1"
         >
-          <svg class="h-3.5 w-3.5 text-slate-400 group-hover:text-cyan-600 shrink-0 transition-colors" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <svg class="h-3.5 w-3.5 text-slate-400 group-hover:text-cyan-600 dark:group-hover:text-cyan-400 shrink-0 transition-colors" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M2 6c4-2 6 2 10 0s6 2 10 0"/>
             <path d="M2 12c4-2 6 2 10 0s6 2 10 0"/>
             <path d="M2 18c4-2 6 2 10 0s6 2 10 0"/>
@@ -97,10 +97,10 @@ const c = t.calculator;
         <button 
           type="button" 
           id="preset-mold"
-          class="group preset-btn flex items-center justify-center gap-2 rounded-lg border border-slate-200 bg-white px-3 py-2 text-xs font-semibold text-slate-700 shadow-xs hover:border-cyan-600 hover:text-cyan-700 hover:bg-cyan-50/50 transition-all focus-visible:outline-2 focus-visible:outline-cyan-600 cursor-pointer"
+          class="group preset-btn flex items-center justify-center gap-2 rounded-lg border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 px-3 py-2 text-xs font-semibold text-slate-700 dark:text-slate-200 shadow-xs hover:border-cyan-600 dark:hover:border-cyan-500 hover:text-cyan-700 dark:hover:text-cyan-400 hover:bg-cyan-50/50 dark:hover:bg-cyan-950/40 transition-all focus-visible:outline-2 focus-visible:outline-cyan-600 cursor-pointer"
           data-shape="known-volume" data-volume="250" data-volumeunit="ml" data-ratio="1:1"
         >
-          <svg class="h-3.5 w-3.5 text-slate-400 group-hover:text-cyan-600 shrink-0 transition-colors" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <svg class="h-3.5 w-3.5 text-slate-400 group-hover:text-cyan-600 dark:group-hover:text-cyan-400 shrink-0 transition-colors" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M10 2v7.31L4.14 18.5A2 2 0 0 0 5.86 21h12.28a2 2 0 0 0 1.72-2.5L14 9.31V2"/>
             <line x1="8.5" y1="2" x2="15.5" y2="2"/>
             <line x1="7" y1="15" x2="17" y2="15"/>
@@ -117,8 +117,8 @@ const c = t.calculator;
       <div class="lg:col-span-7 space-y-6">
         
         {/* Step 1: Shape Selector Tabs */}
-        <div class="rounded-2xl border border-slate-200 bg-white p-5 shadow-xs">
-          <label class="block text-sm font-bold tracking-tight text-slate-900 mb-3">
+        <div class="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-5 shadow-xs">
+          <label class="block text-sm font-bold tracking-tight text-slate-900 dark:text-white mb-3">
             {c.projectShape}
           </label>
           <div class="grid grid-cols-2 gap-2 sm:grid-cols-3 lg:grid-cols-5" role="tablist" aria-label="Project Shapes">
@@ -130,12 +130,12 @@ const c = t.calculator;
               id="shape-tab-rectangle"
               data-shape="rectangle"
               aria-selected="true"
-              class="shape-tab flex flex-col items-center justify-center gap-2 rounded-xl border-2 border-cyan-600 bg-cyan-50/70 p-3 text-center transition-all focus-visible:outline-2 focus-visible:outline-cyan-600 cursor-pointer"
+              class="shape-tab flex flex-col items-center justify-center gap-2 rounded-xl border-2 border-cyan-600 dark:border-cyan-400 bg-cyan-50/70 dark:bg-cyan-950/70 p-3 text-center transition-all focus-visible:outline-2 focus-visible:outline-cyan-600 cursor-pointer"
             >
-              <svg class="h-6 w-6 text-cyan-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <svg class="h-6 w-6 text-cyan-600 dark:text-cyan-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <rect x="3" y="5" width="18" height="14" rx="2" />
               </svg>
-              <span class="text-xs font-bold text-cyan-900">{c.shapes.rectangle}</span>
+              <span class="text-xs font-bold text-cyan-900 dark:text-cyan-300">{c.shapes.rectangle}</span>
             </button>
 
             {/* Circle */}
@@ -145,12 +145,12 @@ const c = t.calculator;
               id="shape-tab-circle"
               data-shape="circle"
               aria-selected="false"
-              class="shape-tab flex flex-col items-center justify-center gap-2 rounded-xl border-2 border-slate-200 bg-slate-50/50 p-3 text-center hover:border-slate-300 transition-all focus-visible:outline-2 focus-visible:outline-cyan-600 cursor-pointer"
+              class="shape-tab flex flex-col items-center justify-center gap-2 rounded-xl border-2 border-slate-200 dark:border-slate-700 bg-slate-50/50 dark:bg-slate-800/60 p-3 text-center hover:border-slate-300 dark:hover:border-slate-600 transition-all focus-visible:outline-2 focus-visible:outline-cyan-600 cursor-pointer"
             >
-              <svg class="h-6 w-6 text-slate-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <svg class="h-6 w-6 text-slate-600 dark:text-slate-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <circle cx="12" cy="12" r="9" />
               </svg>
-              <span class="text-xs font-bold text-slate-700">{c.shapes.circle}</span>
+              <span class="text-xs font-bold text-slate-700 dark:text-slate-200">{c.shapes.circle}</span>
             </button>
 
             {/* Oval */}
@@ -160,12 +160,12 @@ const c = t.calculator;
               id="shape-tab-oval"
               data-shape="oval"
               aria-selected="false"
-              class="shape-tab flex flex-col items-center justify-center gap-2 rounded-xl border-2 border-slate-200 bg-slate-50/50 p-3 text-center hover:border-slate-300 transition-all focus-visible:outline-2 focus-visible:outline-cyan-600 cursor-pointer"
+              class="shape-tab flex flex-col items-center justify-center gap-2 rounded-xl border-2 border-slate-200 dark:border-slate-700 bg-slate-50/50 dark:bg-slate-800/60 p-3 text-center hover:border-slate-300 dark:hover:border-slate-600 transition-all focus-visible:outline-2 focus-visible:outline-cyan-600 cursor-pointer"
             >
-              <svg class="h-6 w-6 text-slate-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <svg class="h-6 w-6 text-slate-600 dark:text-slate-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <ellipse cx="12" cy="12" rx="9" ry="6" />
               </svg>
-              <span class="text-xs font-bold text-slate-700">{c.shapes.oval}</span>
+              <span class="text-xs font-bold text-slate-700 dark:text-slate-200">{c.shapes.oval}</span>
             </button>
 
             {/* River Table */}
@@ -175,14 +175,14 @@ const c = t.calculator;
               id="shape-tab-river-table"
               data-shape="river-table"
               aria-selected="false"
-              class="shape-tab flex flex-col items-center justify-center gap-2 rounded-xl border-2 border-slate-200 bg-slate-50/50 p-3 text-center hover:border-slate-300 transition-all focus-visible:outline-2 focus-visible:outline-cyan-600 cursor-pointer"
+              class="shape-tab flex flex-col items-center justify-center gap-2 rounded-xl border-2 border-slate-200 dark:border-slate-700 bg-slate-50/50 dark:bg-slate-800/60 p-3 text-center hover:border-slate-300 dark:hover:border-slate-600 transition-all focus-visible:outline-2 focus-visible:outline-cyan-600 cursor-pointer"
             >
-              <svg class="h-6 w-6 text-slate-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <svg class="h-6 w-6 text-slate-600 dark:text-slate-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <rect x="3" y="3" width="18" height="18" rx="2" />
                 <path d="M8 3c1 5-2 9 0 18" stroke="#0891b2" stroke-width="2" />
                 <path d="M16 3c-1 5 2 9 0 18" stroke="#0891b2" stroke-width="2" />
               </svg>
-              <span class="text-xs font-bold text-slate-700">{c.shapes.riverTable}</span>
+              <span class="text-xs font-bold text-slate-700 dark:text-slate-200">{c.shapes.riverTable}</span>
             </button>
 
             {/* Known Volume (Water Displacement) */}
@@ -192,32 +192,32 @@ const c = t.calculator;
               id="shape-tab-known-volume"
               data-shape="known-volume"
               aria-selected="false"
-              class="shape-tab flex flex-col items-center justify-center gap-2 rounded-xl border-2 border-slate-200 bg-slate-50/50 p-3 text-center hover:border-slate-300 transition-all focus-visible:outline-2 focus-visible:outline-cyan-600 cursor-pointer col-span-2 sm:col-span-1"
+              class="shape-tab flex flex-col items-center justify-center gap-2 rounded-xl border-2 border-slate-200 dark:border-slate-700 bg-slate-50/50 dark:bg-slate-800/60 p-3 text-center hover:border-slate-300 dark:hover:border-slate-600 transition-all focus-visible:outline-2 focus-visible:outline-cyan-600 cursor-pointer col-span-2 sm:col-span-1"
             >
-              <svg class="h-6 w-6 text-slate-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <svg class="h-6 w-6 text-slate-600 dark:text-slate-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z" />
               </svg>
-              <span class="text-xs font-bold text-slate-700">{c.shapes.knownVolume}</span>
+              <span class="text-xs font-bold text-slate-700 dark:text-slate-200">{c.shapes.knownVolume}</span>
             </button>
 
           </div>
         </div>
 
         {/* Step 2: Dimensions Grid */}
-        <div class="rounded-2xl border border-slate-200 bg-white p-5 shadow-xs">
+        <div class="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-5 shadow-xs">
           <div class="flex items-center justify-between mb-4">
-            <h2 class="text-sm font-bold tracking-tight text-slate-900">
+            <h2 class="text-sm font-bold tracking-tight text-slate-900 dark:text-white">
               {c.dimensionsTitle}
             </h2>
             
             {/* Global Unit Switcher */}
             <div class="flex items-center gap-2">
-              <label for="dimension-unit-select" class="text-xs font-semibold text-slate-500">
+              <label for="dimension-unit-select" class="text-xs font-semibold text-slate-500 dark:text-slate-400">
                 {c.dimensionUnit}:
               </label>
               <select 
                 id="dimension-unit-select" 
-                class="rounded-lg border border-slate-300 bg-slate-50 px-2.5 py-1 text-xs font-bold text-slate-800 shadow-xs focus:border-cyan-600 focus:outline-none focus:ring-2 focus:ring-cyan-600/20 cursor-pointer"
+                class="rounded-lg border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 px-2.5 py-1 text-xs font-bold text-slate-800 dark:text-slate-100 shadow-xs focus:border-cyan-600 dark:focus:border-cyan-400 focus:outline-none focus:ring-2 focus:ring-cyan-600/20 cursor-pointer"
                 aria-label="Measurement units"
               >
                 <option value="cm" selected>{c.units.cm}</option>
@@ -234,7 +234,7 @@ const c = t.calculator;
             {/* Length Field (Rectangle, Oval, River Table) */}
             <div id="field-wrapper-length" class="space-y-1">
               <div class="flex justify-between">
-                <label for="input-length" class="text-xs font-bold text-slate-700">
+                <label for="input-length" class="text-xs font-bold text-slate-700 dark:text-slate-200">
                   <span id="label-length-text">{c.length}</span> (<span class="unit-badge">cm</span>)
                 </label>
               </div>
@@ -245,7 +245,7 @@ const c = t.calculator;
                   min="0.1" 
                   step="any" 
                   value="30" 
-                  class="w-full rounded-xl border border-slate-200 bg-slate-50/50 px-3.5 py-2.5 text-sm font-semibold text-slate-900 shadow-inner focus:border-cyan-600 focus:bg-white focus:outline-none focus:ring-2 focus:ring-cyan-600/20 tabular-nums transition-colors"
+                  class="w-full rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50/50 dark:bg-slate-950/70 px-3.5 py-2.5 text-sm font-semibold text-slate-900 dark:text-white shadow-inner focus:border-cyan-600 dark:focus:border-cyan-400 focus:bg-white dark:focus:bg-slate-950 focus:outline-none focus:ring-2 focus:ring-cyan-600/20 tabular-nums transition-colors"
                   aria-label="Project Length"
                 />
               </div>
@@ -254,7 +254,7 @@ const c = t.calculator;
             {/* Width Field (Rectangle, Oval) */}
             <div id="field-wrapper-width" class="space-y-1">
               <div class="flex justify-between">
-                <label for="input-width" class="text-xs font-bold text-slate-700">
+                <label for="input-width" class="text-xs font-bold text-slate-700 dark:text-slate-200">
                   {c.width} (<span class="unit-badge">cm</span>)
                 </label>
               </div>
@@ -265,7 +265,7 @@ const c = t.calculator;
                   min="0.1" 
                   step="any" 
                   value="30" 
-                  class="w-full rounded-xl border border-slate-200 bg-slate-50/50 px-3.5 py-2.5 text-sm font-semibold text-slate-900 shadow-inner focus:border-cyan-600 focus:bg-white focus:outline-none focus:ring-2 focus:ring-cyan-600/20 tabular-nums transition-colors"
+                  class="w-full rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50/50 dark:bg-slate-950/70 px-3.5 py-2.5 text-sm font-semibold text-slate-900 dark:text-white shadow-inner focus:border-cyan-600 dark:focus:border-cyan-400 focus:bg-white dark:focus:bg-slate-950 focus:outline-none focus:ring-2 focus:ring-cyan-600/20 tabular-nums transition-colors"
                   aria-label="Project Width"
                 />
               </div>
@@ -274,7 +274,7 @@ const c = t.calculator;
             {/* Diameter Field (Circle only - hidden by default) */}
             <div id="field-wrapper-diameter" class="space-y-1 hidden">
               <div class="flex justify-between">
-                <label for="input-diameter" class="text-xs font-bold text-slate-700">
+                <label for="input-diameter" class="text-xs font-bold text-slate-700 dark:text-slate-200">
                   {c.diameter} (<span class="unit-badge">cm</span>)
                 </label>
               </div>
@@ -285,7 +285,7 @@ const c = t.calculator;
                   min="0.1" 
                   step="any" 
                   value="60" 
-                  class="w-full rounded-xl border border-slate-200 bg-slate-50/50 px-3.5 py-2.5 text-sm font-semibold text-slate-900 shadow-inner focus:border-cyan-600 focus:bg-white focus:outline-none focus:ring-2 focus:ring-cyan-600/20 tabular-nums transition-colors"
+                  class="w-full rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50/50 dark:bg-slate-950/70 px-3.5 py-2.5 text-sm font-semibold text-slate-900 dark:text-white shadow-inner focus:border-cyan-600 dark:focus:border-cyan-400 focus:bg-white dark:focus:bg-slate-950 focus:outline-none focus:ring-2 focus:ring-cyan-600/20 tabular-nums transition-colors"
                   aria-label="Circle Diameter"
                 />
               </div>
@@ -294,7 +294,7 @@ const c = t.calculator;
             {/* Average Void Width Field (River Table only - hidden by default) */}
             <div id="field-wrapper-voidwidth" class="space-y-1 hidden">
               <div class="flex justify-between">
-                <label for="input-voidwidth" class="text-xs font-bold text-slate-700">
+                <label for="input-voidwidth" class="text-xs font-bold text-slate-700 dark:text-slate-200">
                   {c.avgVoidWidth} (<span class="unit-badge">cm</span>)
                 </label>
               </div>
@@ -305,7 +305,7 @@ const c = t.calculator;
                   min="0.1" 
                   step="any" 
                   value="20" 
-                  class="w-full rounded-xl border border-slate-200 bg-slate-50/50 px-3.5 py-2.5 text-sm font-semibold text-slate-900 shadow-inner focus:border-cyan-600 focus:bg-white focus:outline-none focus:ring-2 focus:ring-cyan-600/20 tabular-nums transition-colors"
+                  class="w-full rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50/50 dark:bg-slate-950/70 px-3.5 py-2.5 text-sm font-semibold text-slate-900 dark:text-white shadow-inner focus:border-cyan-600 dark:focus:border-cyan-400 focus:bg-white dark:focus:bg-slate-950 focus:outline-none focus:ring-2 focus:ring-cyan-600/20 tabular-nums transition-colors"
                   aria-label="Average Void Width"
                 />
               </div>
@@ -314,10 +314,10 @@ const c = t.calculator;
             {/* Depth / Thickness Field (Geometric shapes) */}
             <div id="field-wrapper-depth" class="space-y-1 sm:col-span-2">
               <div class="flex justify-between items-center">
-                <label for="input-depth" class="text-xs font-bold text-slate-700">
+                <label for="input-depth" class="text-xs font-bold text-slate-700 dark:text-slate-200">
                   {c.depth} (<span class="unit-badge">cm</span>)
                 </label>
-                <span class="text-[11px] text-slate-500">{c.depthSubtext}</span>
+                <span class="text-[11px] text-slate-500 dark:text-slate-400">{c.depthSubtext}</span>
               </div>
               <div class="relative">
                 <input 
@@ -326,7 +326,7 @@ const c = t.calculator;
                   min="0.01" 
                   step="any" 
                   value="1.0" 
-                  class="w-full rounded-xl border border-slate-200 bg-slate-50/50 px-3.5 py-2.5 text-sm font-semibold text-slate-900 shadow-inner focus:border-cyan-600 focus:bg-white focus:outline-none focus:ring-2 focus:ring-cyan-600/20 tabular-nums transition-colors"
+                  class="w-full rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50/50 dark:bg-slate-950/70 px-3.5 py-2.5 text-sm font-semibold text-slate-900 dark:text-white shadow-inner focus:border-cyan-600 dark:focus:border-cyan-400 focus:bg-white dark:focus:bg-slate-950 focus:outline-none focus:ring-2 focus:ring-cyan-600/20 tabular-nums transition-colors"
                   aria-label="Pour Depth or Thickness"
                 />
               </div>
@@ -335,14 +335,14 @@ const c = t.calculator;
             {/* Known Volume Field (Irregular Molds / Water Displacement - hidden by default) */}
             <div id="field-wrapper-known-volume" class="space-y-2 sm:col-span-2 hidden">
               <div class="flex justify-between items-center">
-                <label for="input-known-volume" class="text-xs font-bold text-slate-700">
+                <label for="input-known-volume" class="text-xs font-bold text-slate-700 dark:text-slate-200">
                   {c.knownVolumeLabel}
                 </label>
                 <div class="flex items-center gap-1.5">
-                  <span class="text-[11px] text-slate-500">{c.dimensionUnit}:</span>
+                  <span class="text-[11px] text-slate-500 dark:text-slate-400">{c.dimensionUnit}:</span>
                   <select 
                     id="known-volume-unit-select" 
-                    class="rounded-md border border-slate-300 bg-slate-50 px-2 py-0.5 text-xs font-bold text-slate-800 shadow-xs focus:border-cyan-600 focus:outline-none focus:ring-1 focus:ring-cyan-600 cursor-pointer"
+                    class="rounded-md border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 px-2 py-0.5 text-xs font-bold text-slate-800 dark:text-slate-100 shadow-xs focus:border-cyan-600 dark:focus:border-cyan-400 focus:outline-none focus:ring-1 focus:ring-cyan-600 cursor-pointer"
                     aria-label="Known volume unit"
                   >
                     <option value="ml" selected>{c.volumeUnits.ml}</option>
@@ -352,7 +352,7 @@ const c = t.calculator;
                   </select>
                 </div>
               </div>
-              <p class="text-[11px] text-slate-500">
+              <p class="text-[11px] text-slate-500 dark:text-slate-400">
                 {c.knownVolumeSubtext}
               </p>
               <div class="relative">
@@ -362,7 +362,7 @@ const c = t.calculator;
                   min="1" 
                   step="any" 
                   value="250" 
-                  class="w-full rounded-xl border border-slate-200 bg-slate-50/50 px-3.5 py-2.5 text-sm font-semibold text-slate-900 shadow-inner focus:border-cyan-600 focus:bg-white focus:outline-none focus:ring-2 focus:ring-cyan-600/20 tabular-nums transition-colors"
+                  class="w-full rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50/50 dark:bg-slate-950/70 px-3.5 py-2.5 text-sm font-semibold text-slate-900 dark:text-white shadow-inner focus:border-cyan-600 dark:focus:border-cyan-400 focus:bg-white dark:focus:bg-slate-950 focus:outline-none focus:ring-2 focus:ring-cyan-600/20 tabular-nums transition-colors"
                   aria-label="Known Volume Amount"
                 />
               </div>
@@ -372,37 +372,37 @@ const c = t.calculator;
         </div>
 
         {/* Step 3: Wastage / Safety Margin Buffer */}
-        <div class="rounded-2xl border border-slate-200 bg-white p-5 shadow-xs">
+        <div class="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-5 shadow-xs">
           <div class="flex items-center justify-between mb-2">
-            <h2 class="text-sm font-bold tracking-tight text-slate-900">
+            <h2 class="text-sm font-bold tracking-tight text-slate-900 dark:text-white">
               {c.wastageTitle}
             </h2>
-            <span id="wastage-display-badge" class="rounded-full bg-cyan-100 px-2.5 py-0.5 text-xs font-black text-cyan-800">
+            <span id="wastage-display-badge" class="rounded-full bg-cyan-100 dark:bg-cyan-950 dark:border dark:border-cyan-800 px-2.5 py-0.5 text-xs font-black text-cyan-800 dark:text-cyan-300">
               10% {c.bufferBadge}
             </span>
           </div>
-          <p class="text-xs text-slate-500 mb-3">
+          <p class="text-xs text-slate-500 dark:text-slate-400 mb-3">
             {c.wastageSubtext}
           </p>
 
           <div class="flex items-center gap-2 mb-3">
             <button 
               type="button" 
-              class="wastage-pill flex-1 rounded-lg border border-slate-200 bg-slate-50 py-1.5 text-xs font-bold text-slate-700 hover:border-slate-300 focus-visible:outline-2 focus-visible:outline-cyan-600 transition-all"
+              class="wastage-pill flex-1 rounded-lg border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 py-1.5 text-xs font-bold text-slate-700 dark:text-slate-200 hover:border-slate-300 dark:hover:border-slate-600 focus-visible:outline-2 focus-visible:outline-cyan-600 transition-all"
               data-percent="0"
             >
               0% ({c.wastagePills.exact})
             </button>
             <button 
               type="button" 
-              class="wastage-pill flex-1 rounded-lg border border-slate-200 bg-slate-50 py-1.5 text-xs font-bold text-slate-700 hover:border-slate-300 focus-visible:outline-2 focus-visible:outline-cyan-600 transition-all"
+              class="wastage-pill flex-1 rounded-lg border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 py-1.5 text-xs font-bold text-slate-700 dark:text-slate-200 hover:border-slate-300 dark:hover:border-slate-600 focus-visible:outline-2 focus-visible:outline-cyan-600 transition-all"
               data-percent="5"
             >
               5% ({c.wastagePills.standard})
             </button>
             <button 
               type="button" 
-              class="wastage-pill flex-1 rounded-lg border-2 border-cyan-600 bg-cyan-50/80 py-1.5 text-xs font-bold text-cyan-900 focus-visible:outline-2 focus-visible:outline-cyan-600 transition-all"
+              class="wastage-pill flex-1 rounded-lg border-2 border-cyan-600 dark:border-cyan-400 bg-cyan-50/80 dark:bg-cyan-950/70 py-1.5 text-xs font-bold text-cyan-900 dark:text-cyan-300 focus-visible:outline-2 focus-visible:outline-cyan-600 transition-all"
               data-percent="10"
             >
               10% ({c.wastagePills.recommended})
@@ -420,35 +420,35 @@ const c = t.calculator;
               class="w-full cursor-pointer"
               aria-label="Wastage safety margin percentage slider"
             />
-            <span class="text-xs font-bold text-slate-700 w-10 text-right tabular-nums" id="slider-percent-text">10%</span>
+            <span class="text-xs font-bold text-slate-700 dark:text-slate-200 w-10 text-right tabular-nums" id="slider-percent-text">10%</span>
           </div>
         </div>
 
         {/* Step 4: Mixing Ratio & Calculation Mode */}
-        <div class="rounded-2xl border border-slate-200 bg-white p-5 shadow-xs space-y-5">
+        <div class="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-5 shadow-xs space-y-5">
           <div>
             <div class="flex items-center justify-between mb-2">
-              <h2 class="text-sm font-bold tracking-tight text-slate-900">
+              <h2 class="text-sm font-bold tracking-tight text-slate-900 dark:text-white">
                 {c.ratioTitle}
               </h2>
             </div>
             
             {/* Ratio Presets */}
             <div class="grid grid-cols-4 sm:grid-cols-8 gap-1.5" role="radiogroup" aria-label="Manufacturer Mixing Ratio Presets">
-              <button type="button" class="ratio-btn rounded-lg border border-slate-200 bg-slate-50 py-1.5 text-xs font-bold text-slate-700 hover:border-slate-300 focus-visible:outline-2 focus-visible:outline-cyan-600 transition-all" data-ratio="1:1">1:1</button>
-              <button type="button" class="ratio-btn rounded-lg border-2 border-cyan-600 bg-cyan-50/80 py-1.5 text-xs font-bold text-cyan-900 focus-visible:outline-2 focus-visible:outline-cyan-600 transition-all" data-ratio="2:1">2:1</button>
-              <button type="button" class="ratio-btn rounded-lg border border-slate-200 bg-slate-50 py-1.5 text-xs font-bold text-slate-700 hover:border-slate-300 focus-visible:outline-2 focus-visible:outline-cyan-600 transition-all" data-ratio="3:1">3:1</button>
-              <button type="button" class="ratio-btn rounded-lg border border-slate-200 bg-slate-50 py-1.5 text-xs font-bold text-slate-700 hover:border-slate-300 focus-visible:outline-2 focus-visible:outline-cyan-600 transition-all" data-ratio="4:1">4:1</button>
-              <button type="button" class="ratio-btn rounded-lg border border-slate-200 bg-slate-50 py-1.5 text-xs font-bold text-slate-700 hover:border-slate-300 focus-visible:outline-2 focus-visible:outline-cyan-600 transition-all" data-ratio="100:50">100:50</button>
-              <button type="button" class="ratio-btn rounded-lg border border-slate-200 bg-slate-50 py-1.5 text-xs font-bold text-slate-700 hover:border-slate-300 focus-visible:outline-2 focus-visible:outline-cyan-600 transition-all" data-ratio="100:45">100:45</button>
-              <button type="button" class="ratio-btn rounded-lg border border-slate-200 bg-slate-50 py-1.5 text-xs font-bold text-slate-700 hover:border-slate-300 focus-visible:outline-2 focus-visible:outline-cyan-600 transition-all" data-ratio="100:30">100:30</button>
-              <button type="button" class="ratio-btn rounded-lg border border-slate-200 bg-slate-50 py-1.5 text-xs font-bold text-slate-700 hover:border-slate-300 focus-visible:outline-2 focus-visible:outline-cyan-600 transition-all" data-ratio="custom">{c.customRatio}</button>
+              <button type="button" class="ratio-btn rounded-lg border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 py-1.5 text-xs font-bold text-slate-700 dark:text-slate-200 hover:border-slate-300 dark:hover:border-slate-600 focus-visible:outline-2 focus-visible:outline-cyan-600 transition-all" data-ratio="1:1">1:1</button>
+              <button type="button" class="ratio-btn rounded-lg border-2 border-cyan-600 dark:border-cyan-400 bg-cyan-50/80 dark:bg-cyan-950/70 py-1.5 text-xs font-bold text-cyan-900 dark:text-cyan-300 focus-visible:outline-2 focus-visible:outline-cyan-600 transition-all" data-ratio="2:1">2:1</button>
+              <button type="button" class="ratio-btn rounded-lg border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 py-1.5 text-xs font-bold text-slate-700 dark:text-slate-200 hover:border-slate-300 dark:hover:border-slate-600 focus-visible:outline-2 focus-visible:outline-cyan-600 transition-all" data-ratio="3:1">3:1</button>
+              <button type="button" class="ratio-btn rounded-lg border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 py-1.5 text-xs font-bold text-slate-700 dark:text-slate-200 hover:border-slate-300 dark:hover:border-slate-600 focus-visible:outline-2 focus-visible:outline-cyan-600 transition-all" data-ratio="4:1">4:1</button>
+              <button type="button" class="ratio-btn rounded-lg border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 py-1.5 text-xs font-bold text-slate-700 dark:text-slate-200 hover:border-slate-300 dark:hover:border-slate-600 focus-visible:outline-2 focus-visible:outline-cyan-600 transition-all" data-ratio="100:50">100:50</button>
+              <button type="button" class="ratio-btn rounded-lg border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 py-1.5 text-xs font-bold text-slate-700 dark:text-slate-200 hover:border-slate-300 dark:hover:border-slate-600 focus-visible:outline-2 focus-visible:outline-cyan-600 transition-all" data-ratio="100:45">100:45</button>
+              <button type="button" class="ratio-btn rounded-lg border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 py-1.5 text-xs font-bold text-slate-700 dark:text-slate-200 hover:border-slate-300 dark:hover:border-slate-600 focus-visible:outline-2 focus-visible:outline-cyan-600 transition-all" data-ratio="100:30">100:30</button>
+              <button type="button" class="ratio-btn rounded-lg border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 py-1.5 text-xs font-bold text-slate-700 dark:text-slate-200 hover:border-slate-300 dark:hover:border-slate-600 focus-visible:outline-2 focus-visible:outline-cyan-600 transition-all" data-ratio="custom">{c.customRatio}</button>
             </div>
 
             {/* Custom Ratio Inputs (hidden by default) */}
-            <div id="custom-ratio-wrapper" class="mt-3 grid grid-cols-2 gap-3 p-3 rounded-xl bg-slate-50 border border-slate-200 hidden">
+            <div id="custom-ratio-wrapper" class="mt-3 grid grid-cols-2 gap-3 p-3 rounded-xl bg-slate-50 dark:bg-slate-950/70 border border-slate-200 dark:border-slate-800 hidden">
               <div>
-                <label for="custom-ratio-a" class="block text-xs font-bold text-cyan-900 mb-1">
+                <label for="custom-ratio-a" class="block text-xs font-bold text-cyan-900 dark:text-cyan-300 mb-1">
                   {c.partALabel} ({c.ratioLabel})
                 </label>
                 <input 
@@ -457,12 +457,12 @@ const c = t.calculator;
                   min="0.1" 
                   step="any" 
                   value="2" 
-                  class="w-full rounded-lg border border-slate-200 bg-white px-3 py-1.5 text-xs font-bold text-slate-900 tabular-nums focus:border-cyan-600 focus:outline-none"
+                  class="w-full rounded-lg border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 px-3 py-1.5 text-xs font-bold text-slate-900 dark:text-white tabular-nums focus:border-cyan-600 focus:outline-none"
                   aria-label="Custom Part A Ratio"
                 />
               </div>
               <div>
-                <label for="custom-ratio-b" class="block text-xs font-bold text-amber-900 mb-1">
+                <label for="custom-ratio-b" class="block text-xs font-bold text-amber-900 dark:text-amber-300 mb-1">
                   {c.partBLabel} ({c.ratioLabel})
                 </label>
                 <input 
@@ -471,7 +471,7 @@ const c = t.calculator;
                   min="0.1" 
                   step="any" 
                   value="1" 
-                  class="w-full rounded-lg border border-slate-200 bg-white px-3 py-1.5 text-xs font-bold text-slate-900 tabular-nums focus:border-cyan-600 focus:outline-none"
+                  class="w-full rounded-lg border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 px-3 py-1.5 text-xs font-bold text-slate-900 dark:text-white tabular-nums focus:border-cyan-600 focus:outline-none"
                   aria-label="Custom Part B Ratio"
                 />
               </div>
@@ -479,48 +479,48 @@ const c = t.calculator;
           </div>
 
           {/* Volume vs. Weight Calculation Mode Toggle */}
-          <div class="border-t border-slate-100 pt-4">
-            <label class="block text-xs font-bold text-slate-700 mb-2">
+          <div class="border-t border-slate-100 dark:border-slate-800 pt-4">
+            <label class="block text-xs font-bold text-slate-700 dark:text-slate-200 mb-2">
               {c.splitModeTitle}
             </label>
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-2" role="radiogroup">
               <button 
                 type="button" 
                 id="mode-volume-btn"
-                class="mode-btn flex items-center justify-center gap-2 rounded-xl border-2 border-cyan-600 bg-cyan-50/80 px-3 py-2 text-xs font-bold text-cyan-900 focus-visible:outline-2 focus-visible:outline-cyan-600 transition-all"
+                class="mode-btn flex items-center justify-center gap-2 rounded-xl border-2 border-cyan-600 dark:border-cyan-400 bg-cyan-50/80 dark:bg-cyan-950/70 px-3 py-2 text-xs font-bold text-cyan-900 dark:text-cyan-300 focus-visible:outline-2 focus-visible:outline-cyan-600 transition-all"
                 data-mode="volume"
               >
-                <svg class="h-4 w-4 text-cyan-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4.5 3h15"/><path d="M6 3v16a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V3"/></svg>
+                <svg class="h-4 w-4 text-cyan-600 dark:text-cyan-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4.5 3h15"/><path d="M6 3v16a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V3"/></svg>
                 <span>{c.splitModeVolume}</span>
               </button>
               <button 
                 type="button" 
                 id="mode-weight-btn"
-                class="mode-btn flex items-center justify-center gap-2 rounded-xl border border-slate-200 bg-slate-50/50 px-3 py-2 text-xs font-bold text-slate-700 hover:border-slate-300 focus-visible:outline-2 focus-visible:outline-cyan-600 transition-all"
+                class="mode-btn flex items-center justify-center gap-2 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50/50 dark:bg-slate-800 px-3 py-2 text-xs font-bold text-slate-700 dark:text-slate-300 hover:border-slate-300 dark:hover:border-slate-600 focus-visible:outline-2 focus-visible:outline-cyan-600 transition-all"
                 data-mode="weight"
               >
-                <svg class="h-4 w-4 text-slate-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="8"/><path d="M12 4v4"/><path d="m15 15-3-3"/></svg>
+                <svg class="h-4 w-4 text-slate-500 dark:text-slate-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="8"/><path d="M12 4v4"/><path d="m15 15-3-3"/></svg>
                 <span>{c.splitModeWeight}</span>
               </button>
             </div>
           </div>
 
           {/* Advanced Specific Gravities (TDS Overrides Accordion) */}
-          <details class="group rounded-xl border border-slate-200/80 bg-slate-50/50 overflow-hidden">
-            <summary class="flex cursor-pointer items-center justify-between px-3.5 py-2.5 text-xs font-bold text-slate-700 hover:text-cyan-700 select-none">
+          <details class="group rounded-xl border border-slate-200/80 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-950/50 overflow-hidden">
+            <summary class="flex cursor-pointer items-center justify-between px-3.5 py-2.5 text-xs font-bold text-slate-700 dark:text-slate-200 hover:text-cyan-700 dark:hover:text-cyan-400 select-none">
               <div class="flex items-center gap-2">
-                <svg class="h-3.5 w-3.5 text-slate-400 group-open:text-cyan-600 transition-colors" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+                <svg class="h-3.5 w-3.5 text-slate-400 group-open:text-cyan-600 dark:group-open:text-cyan-400 transition-colors" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
                 <span>{c.advancedDensities}</span>
               </div>
               <svg class="h-3.5 w-3.5 transform transition-transform group-open:rotate-180 text-slate-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
             </summary>
-            <div class="px-3.5 pb-3 pt-1 border-t border-slate-200/50 space-y-3">
-              <p class="text-[11px] text-slate-500">
+            <div class="px-3.5 pb-3 pt-1 border-t border-slate-200/50 dark:border-slate-800 space-y-3">
+              <p class="text-[11px] text-slate-500 dark:text-slate-400">
                 {c.advancedDensitiesSubtext}
               </p>
               <div class="grid grid-cols-2 gap-3">
                 <div>
-                  <label for="density-a-input" class="block text-[11px] font-semibold text-slate-600 mb-1">
+                  <label for="density-a-input" class="block text-[11px] font-semibold text-slate-600 dark:text-slate-300 mb-1">
                     {c.densityALabel}
                   </label>
                   <input 
@@ -530,12 +530,12 @@ const c = t.calculator;
                     max="2.5" 
                     step="0.01" 
                     value="1.15" 
-                    class="w-full rounded-md border border-slate-200 bg-white px-2.5 py-1 text-xs font-bold text-slate-800 tabular-nums focus:border-cyan-600 focus:outline-none"
+                    class="w-full rounded-md border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 px-2.5 py-1 text-xs font-bold text-slate-800 dark:text-white tabular-nums focus:border-cyan-600 focus:outline-none"
                     aria-label="Resin Specific Gravity"
                   />
                 </div>
                 <div>
-                  <label for="density-b-input" class="block text-[11px] font-semibold text-slate-600 mb-1">
+                  <label for="density-b-input" class="block text-[11px] font-semibold text-slate-600 dark:text-slate-300 mb-1">
                     {c.densityBLabel}
                   </label>
                   <input 
@@ -545,7 +545,7 @@ const c = t.calculator;
                     max="2.5" 
                     step="0.01" 
                     value="1.00" 
-                    class="w-full rounded-md border border-slate-200 bg-white px-2.5 py-1 text-xs font-bold text-slate-800 tabular-nums focus:border-cyan-600 focus:outline-none"
+                    class="w-full rounded-md border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 px-2.5 py-1 text-xs font-bold text-slate-800 dark:text-white tabular-nums focus:border-cyan-600 focus:outline-none"
                     aria-label="Hardener Specific Gravity"
                   />
                 </div>
@@ -1037,9 +1037,9 @@ const c = t.calculator;
       var pills = document.querySelectorAll('.wastage-pill');
       for (var p = 0; p < pills.length; p++) {
         if (pills[p].getAttribute('data-percent') === val) {
-          pills[p].className = 'wastage-pill flex-1 rounded-lg border-2 border-cyan-600 bg-cyan-50/80 py-1.5 text-xs font-bold text-cyan-900 transition-all';
+          pills[p].className = 'wastage-pill flex-1 rounded-lg border-2 border-cyan-600 dark:border-cyan-400 bg-cyan-50/80 dark:bg-cyan-950/70 py-1.5 text-xs font-bold text-cyan-900 dark:text-cyan-300 transition-all';
         } else {
-          pills[p].className = 'wastage-pill flex-1 rounded-lg border border-slate-200 bg-slate-50 py-1.5 text-xs font-bold text-slate-700 hover:border-slate-300 transition-all';
+          pills[p].className = 'wastage-pill flex-1 rounded-lg border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 py-1.5 text-xs font-bold text-slate-700 dark:text-slate-200 hover:border-slate-300 dark:hover:border-slate-600 transition-all';
         }
       }
       calculate();
@@ -1053,9 +1053,9 @@ const c = t.calculator;
         wastageBadge.textContent = pct + '% ' + STR_BUFFER;
         sliderPercentText.textContent = pct + '%';
         for (var j = 0; j < wastagePills.length; j++) {
-          wastagePills[j].className = 'wastage-pill flex-1 rounded-lg border border-slate-200 bg-slate-50 py-1.5 text-xs font-bold text-slate-700 hover:border-slate-300 transition-all';
+          wastagePills[j].className = 'wastage-pill flex-1 rounded-lg border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 py-1.5 text-xs font-bold text-slate-700 dark:text-slate-200 hover:border-slate-300 dark:hover:border-slate-600 transition-all';
         }
-        this.className = 'wastage-pill flex-1 rounded-lg border-2 border-cyan-600 bg-cyan-50/80 py-1.5 text-xs font-bold text-cyan-900 transition-all';
+        this.className = 'wastage-pill flex-1 rounded-lg border-2 border-cyan-600 dark:border-cyan-400 bg-cyan-50/80 dark:bg-cyan-950/70 py-1.5 text-xs font-bold text-cyan-900 dark:text-cyan-300 transition-all';
         calculate();
       });
     }
@@ -1068,18 +1068,18 @@ const c = t.calculator;
         state.shape = shape;
         for (var k = 0; k < shapeTabs.length; k++) {
           shapeTabs[k].setAttribute('aria-selected', 'false');
-          shapeTabs[k].className = 'shape-tab flex flex-col items-center justify-center gap-2 rounded-xl border-2 border-slate-200 bg-slate-50/50 p-3 text-center hover:border-slate-300 transition-all cursor-pointer';
+          shapeTabs[k].className = 'shape-tab flex flex-col items-center justify-center gap-2 rounded-xl border-2 border-slate-200 dark:border-slate-700 bg-slate-50/50 dark:bg-slate-800/60 p-3 text-center hover:border-slate-300 dark:hover:border-slate-600 transition-all cursor-pointer';
           var span = shapeTabs[k].querySelector('span');
-          if (span) span.className = 'text-xs font-bold text-slate-700';
+          if (span) span.className = 'text-xs font-bold text-slate-700 dark:text-slate-200';
           var svg = shapeTabs[k].querySelector('svg');
-          if (svg) svg.className = 'h-6 w-6 text-slate-600';
+          if (svg) svg.className = 'h-6 w-6 text-slate-600 dark:text-slate-300';
         }
         this.setAttribute('aria-selected', 'true');
-        this.className = 'shape-tab flex flex-col items-center justify-center gap-2 rounded-xl border-2 border-cyan-600 bg-cyan-50/70 p-3 text-center transition-all cursor-pointer';
+        this.className = 'shape-tab flex flex-col items-center justify-center gap-2 rounded-xl border-2 border-cyan-600 dark:border-cyan-400 bg-cyan-50/70 dark:bg-cyan-950/70 p-3 text-center transition-all cursor-pointer';
         var activeSpan = this.querySelector('span');
-        if (activeSpan) activeSpan.className = 'text-xs font-bold text-cyan-900';
+        if (activeSpan) activeSpan.className = 'text-xs font-bold text-cyan-900 dark:text-cyan-300';
         var activeSvg = this.querySelector('svg');
-        if (activeSvg) activeSvg.className = 'h-6 w-6 text-cyan-600';
+        if (activeSvg) activeSvg.className = 'h-6 w-6 text-cyan-600 dark:text-cyan-400';
 
         updateShapeVisibility();
         calculate();
@@ -1093,9 +1093,9 @@ const c = t.calculator;
         var r = this.getAttribute('data-ratio');
         state.ratioPreset = r;
         for (var m = 0; m < ratioButtons.length; m++) {
-          ratioButtons[m].className = 'ratio-btn rounded-lg border border-slate-200 bg-slate-50 py-1.5 text-xs font-bold text-slate-700 hover:border-slate-300 transition-all';
+          ratioButtons[m].className = 'ratio-btn rounded-lg border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 py-1.5 text-xs font-bold text-slate-700 dark:text-slate-200 hover:border-slate-300 dark:hover:border-slate-600 transition-all';
         }
-        this.className = 'ratio-btn rounded-lg border-2 border-cyan-600 bg-cyan-50/80 py-1.5 text-xs font-bold text-cyan-900 transition-all';
+        this.className = 'ratio-btn rounded-lg border-2 border-cyan-600 dark:border-cyan-400 bg-cyan-50/80 dark:bg-cyan-950/70 py-1.5 text-xs font-bold text-cyan-900 dark:text-cyan-300 transition-all';
 
         if (r === 'custom') {
           customRatioWrapper.classList.remove('hidden');
@@ -1118,11 +1118,11 @@ const c = t.calculator;
     function setSplitMode(mode) {
       state.splitMode = mode;
       if (mode === 'volume') {
-        modeVolBtn.className = 'mode-btn flex items-center justify-center gap-2 rounded-xl border-2 border-cyan-600 bg-cyan-50/80 px-3 py-2 text-xs font-bold text-cyan-900 transition-all';
-        modeWtBtn.className = 'mode-btn flex items-center justify-center gap-2 rounded-xl border border-slate-200 bg-slate-50/50 px-3 py-2 text-xs font-bold text-slate-700 hover:border-slate-300 transition-all';
+        modeVolBtn.className = 'mode-btn flex items-center justify-center gap-2 rounded-xl border-2 border-cyan-600 dark:border-cyan-400 bg-cyan-50/80 dark:bg-cyan-950/70 px-3 py-2 text-xs font-bold text-cyan-900 dark:text-cyan-300 transition-all';
+        modeWtBtn.className = 'mode-btn flex items-center justify-center gap-2 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50/50 dark:bg-slate-800 px-3 py-2 text-xs font-bold text-slate-700 dark:text-slate-300 hover:border-slate-300 dark:hover:border-slate-600 transition-all';
       } else {
-        modeWtBtn.className = 'mode-btn flex items-center justify-center gap-2 rounded-xl border-2 border-cyan-600 bg-cyan-50/80 px-3 py-2 text-xs font-bold text-cyan-900 transition-all';
-        modeVolBtn.className = 'mode-btn flex items-center justify-center gap-2 rounded-xl border border-slate-200 bg-slate-50/50 px-3 py-2 text-xs font-bold text-slate-700 hover:border-slate-300 transition-all';
+        modeWtBtn.className = 'mode-btn flex items-center justify-center gap-2 rounded-xl border-2 border-cyan-600 dark:border-cyan-400 bg-cyan-50/80 dark:bg-cyan-950/70 px-3 py-2 text-xs font-bold text-cyan-900 dark:text-cyan-300 transition-all';
+        modeVolBtn.className = 'mode-btn flex items-center justify-center gap-2 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50/50 dark:bg-slate-800 px-3 py-2 text-xs font-bold text-slate-700 dark:text-slate-300 hover:border-slate-300 dark:hover:border-slate-600 transition-all';
       }
       calculate();
     }
