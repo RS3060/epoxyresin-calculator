@@ -18,6 +18,7 @@ export const pl: Translations = {
     shapes: 'Wzory Kształtów',
     referenceTable: 'Tabela Zużycia',
     guides: 'Poradnik Mieszania',
+    resinGuide: 'Poradnik Kalkulatora',
     faq: 'FAQ',
     paa: 'Pytania i Odpowiedzi',
   },

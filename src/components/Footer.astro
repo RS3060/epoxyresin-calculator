@@ -24,6 +24,8 @@ const locales: { code: Locale; label: string; flag: string; path: string }[] = [
 ];
 
 const currentYear = 2026;
+const isHome = Astro.url.pathname === '/' || Astro.url.pathname === `/${currentLocale}/` || Astro.url.pathname === `/${currentLocale}`;
+const homePrefix = isHome ? '' : (currentLocale === 'en' ? '/' : `/${currentLocale}/`);
 ---
 
 <footer class="border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 py-12 text-slate-600 dark:text-slate-400">
@@ -56,13 +58,12 @@ const currentYear = 2026;
       <div class="space-y-2">
         <span class="text-xs font-bold uppercase tracking-wider text-slate-900 dark:text-white">{f.calculationsTitle}</span>
         <ul class="space-y-1.5 text-xs">
-          <li><a href="#calculator" class="hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors">{t.nav.calculator}</a></li>
-          <li><a href="#coverage" class="hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors">{t.nav.coverage}</a></li>
-          <li><a href="#reference-table" class="hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors">{t.nav.referenceTable}</a></li>
-          <li><a href="#guides" class="hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors">{t.nav.guides}</a></li>
-          <li><a href="#seo-guide" class="hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors">Resin Calculator Guide</a></li>
-          <li><a href="#faq" class="hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors">{t.nav.faq}</a></li>
-          <li><a href="#paa" class="hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors">{t.nav.paa}</a></li>
+          <li><a href={`${homePrefix}#calculator`} class="hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors">{t.nav.calculator}</a></li>
+          <li><a href={`${homePrefix}#coverage`} class="hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors">{t.nav.coverage}</a></li>
+          <li><a href={`${homePrefix}#reference-table`} class="hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors">{t.nav.referenceTable}</a></li>
+          <li><a href={`${homePrefix}#guides`} class="hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors">{t.nav.guides}</a></li>
+          <li><a href={`${homePrefix}#seo-guide`} class="hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors">{t.nav.resinGuide || 'Resin Calculator Guide'}</a></li>
+          <li><a href={`${homePrefix}#faq`} class="hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors">{t.nav.faq}</a></li>
         </ul>
       </div>
 

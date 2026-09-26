@@ -15,6 +15,7 @@ export interface Translations {
     shapes: string;
     referenceTable: string;
     guides: string;
+    resinGuide: string;
     faq: string;
     paa: string;
   };

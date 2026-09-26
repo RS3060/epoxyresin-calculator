@@ -11,7 +11,8 @@ const t = translations[currentLocale] || translations.en;
 const paa = t.paa || translations.en.paa;
 ---
 
-<section id="paa" class="py-16 bg-white dark:bg-slate-950 border-t border-slate-200/80 dark:border-slate-800">
+<section id="faq" itemscope itemtype="https://schema.org/FAQPage" class="py-16 bg-white dark:bg-slate-950 border-t border-slate-200/80 dark:border-slate-800 scroll-mt-12">
+  <span id="paa" class="sr-only"></span>
   <div class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
     
     <div class="text-center mb-12">
@@ -26,13 +27,15 @@ const paa = t.paa || translations.en.paa;
 
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
       {paa.items.map((item) => (
-        <div class="rounded-2xl border border-slate-200 dark:border-slate-800 bg-slate-50/40 dark:bg-slate-900 p-6 shadow-xs">
-          <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">
+        <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" class="rounded-2xl border border-slate-200 dark:border-slate-800 bg-slate-50/40 dark:bg-slate-900 p-6 shadow-xs">
+          <h3 itemprop="name" class="text-lg font-bold text-slate-900 dark:text-white mb-2">
             {item.q}
           </h3>
-          <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
-            {item.a}
-          </p>
+          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <p itemprop="text" class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+              {item.a}
+            </p>
+          </div>
         </div>
       ))}
     </div>

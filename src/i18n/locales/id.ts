@@ -18,6 +18,7 @@ export const id: Translations = {
     shapes: 'Rumus Bentuk',
     referenceTable: 'Tabel Referensi',
     guides: 'Panduan Pencampuran',
+    resinGuide: 'Panduan Kalkulator Resin',
     faq: 'FAQ',
     paa: 'Tanya Jawab',
   },

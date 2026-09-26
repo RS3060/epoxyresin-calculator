@@ -18,6 +18,7 @@ export const en: Translations = {
     shapes: 'Shape Formulas',
     referenceTable: 'Coverage Table',
     guides: 'Calculations Guide',
+    resinGuide: 'Resin Calculator Guide',
     faq: 'FAQ',
     paa: 'Q&A',
   },

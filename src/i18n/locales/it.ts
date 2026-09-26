@@ -18,6 +18,7 @@ export const it: Translations = {
     shapes: 'Formule Forme',
     referenceTable: 'Tabella Consumi',
     guides: 'Guide Tecniche',
+    resinGuide: 'Guida al Calcolatore',
     faq: 'FAQ',
     paa: 'Domande e Risposte',
   },

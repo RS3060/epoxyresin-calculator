@@ -106,8 +106,8 @@ const articleSchema = {
   }
 };
 
-const faqData = t.faq;
-const faqSchema = faqData ? {
+const faqData = t.faq || t.paa;
+const faqSchema = (faqData && faqData.items && faqData.items.length > 0) ? {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
   'mainEntity': faqData.items.map((item) => ({

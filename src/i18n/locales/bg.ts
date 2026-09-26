@@ -18,6 +18,7 @@ export const bg: Translations = {
     shapes: 'Геометрични Формули',
     referenceTable: 'Таблица за Разход',
     guides: 'Ръководства',
+    resinGuide: 'Ръководство за Калкулатора',
     faq: 'Въпроси',
     paa: 'Въпроси и Отговори',
   },

@@ -18,6 +18,7 @@ export const de: Translations = {
     shapes: 'Formen-Formeln',
     referenceTable: 'Verbrauchstabelle',
     guides: 'Anleitungen',
+    resinGuide: 'Harz-Rechner-Leitfaden',
     faq: 'FAQ',
     paa: 'Fragen & Antworten',
   },

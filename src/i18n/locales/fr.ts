@@ -18,6 +18,7 @@ export const fr: Translations = {
     shapes: 'Formules Géométriques',
     referenceTable: 'Tableau de Dosage',
     guides: 'Guides Techniques',
+    resinGuide: 'Guide du Calculateur',
     faq: 'FAQ',
     paa: 'Questions & Réponses',
   },
